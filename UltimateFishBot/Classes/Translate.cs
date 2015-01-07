@@ -10,7 +10,7 @@ namespace UltimateFishBot.Classes
 {
     class Translate
     {
-        static private XmlElement m_elements;
+        static private XmlElement m_elements = null;
 
         static private void ExtractElements()
         {
@@ -20,7 +20,7 @@ namespace UltimateFishBot.Classes
 
                 try
                 {
-                    doc.Load("./Resources/translate.xml");
+                    doc.Load("./Resources/" + Properties.Settings.Default.Language + ".xml");
                 }
                 catch (Exception ex)
                 {
@@ -34,10 +34,10 @@ namespace UltimateFishBot.Classes
         static public string GetTranslate(string form, string nodeName, params Object[] list)
         {
             ExtractElements();
-            string returnText = "";
+            string returnText = "MISSING TRANSLATION";
 
             if (m_elements == null)
-                return "";
+                return returnText;
 
             try
             {

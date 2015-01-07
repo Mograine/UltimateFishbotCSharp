@@ -99,12 +99,17 @@
             this.txtRetries = new System.Windows.Forms.TextBox();
             this.LabelScanningRetriesDesc = new System.Windows.Forms.Label();
             this.LabelScanningRetries = new System.Windows.Forms.Label();
+            this.TabPage5 = new System.Windows.Forms.TabPage();
+            this.labelLanguage = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.labelLanguageDesc = new System.Windows.Forms.Label();
+            this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.TabPage3.SuspendLayout();
             this.TabPage4.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.TabPage2.SuspendLayout();
             this.TabPage1.SuspendLayout();
+            this.TabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelScanningDelayDesc
@@ -680,6 +685,7 @@
             this.tabSettings.Controls.Add(this.TabPage1);
             this.tabSettings.Controls.Add(this.TabPage3);
             this.tabSettings.Controls.Add(this.TabPage4);
+            this.tabSettings.Controls.Add(this.TabPage5);
             this.tabSettings.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabSettings.Location = new System.Drawing.Point(0, 0);
             this.tabSettings.Name = "tabSettings";
@@ -836,6 +842,28 @@
             this.LabelScanningRetries.TabIndex = 15;
             this.LabelScanningRetries.Text = "Scanning Retries:";
             // 
+            // TabPage5
+            // 
+            this.TabPage5.Controls.Add(this.cmbLanguage);
+            this.TabPage5.Controls.Add(this.labelLanguageDesc);
+            this.TabPage5.Controls.Add(this.labelLanguage);
+            this.TabPage5.Location = new System.Drawing.Point(4, 22);
+            this.TabPage5.Name = "TabPage5";
+            this.TabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage5.Size = new System.Drawing.Size(487, 309);
+            this.TabPage5.TabIndex = 4;
+            this.TabPage5.Text = "Language";
+            this.TabPage5.UseVisualStyleBackColor = true;
+            // 
+            // labelLanguage
+            // 
+            this.labelLanguage.AutoSize = true;
+            this.labelLanguage.Location = new System.Drawing.Point(114, 137);
+            this.labelLanguage.Name = "labelLanguage";
+            this.labelLanguage.Size = new System.Drawing.Size(131, 13);
+            this.labelLanguage.TabIndex = 0;
+            this.labelLanguage.Text = "Language XML File name:";
+            // 
             // btnCancel
             // 
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -846,6 +874,27 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // labelLanguageDesc
+            // 
+            this.labelLanguageDesc.AutoSize = true;
+            this.labelLanguageDesc.Location = new System.Drawing.Point(127, 157);
+            this.labelLanguageDesc.Name = "labelLanguageDesc";
+            this.labelLanguageDesc.Size = new System.Drawing.Size(271, 26);
+            this.labelLanguageDesc.TabIndex = 16;
+            this.labelLanguageDesc.Text = "Select the language file that you want to use.\r\nLanguage XML Files must be found " +
+    "in Resources folder.";
+            // 
+            // cmbLanguage
+            // 
+            this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLanguage.FormattingEnabled = true;
+            this.cmbLanguage.Items.AddRange(new object[] {
+            "Default"});
+            this.cmbLanguage.Location = new System.Drawing.Point(251, 134);
+            this.cmbLanguage.Name = "cmbLanguage";
+            this.cmbLanguage.Size = new System.Drawing.Size(99, 21);
+            this.cmbLanguage.TabIndex = 17;
             // 
             // frmSettings
             // 
@@ -866,6 +915,8 @@
             this.TabPage2.PerformLayout();
             this.TabPage1.ResumeLayout(false);
             this.TabPage1.PerformLayout();
+            this.TabPage5.ResumeLayout(false);
+            this.TabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -943,6 +994,10 @@
         internal System.Windows.Forms.Label LabelScanningRetriesDesc;
         internal System.Windows.Forms.Label LabelScanningRetries;
         internal System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TabPage TabPage5;
+        private System.Windows.Forms.Label labelLanguage;
+        private System.Windows.Forms.Label labelLanguageDesc;
+        internal System.Windows.Forms.ComboBox cmbLanguage;
 
     }
 }

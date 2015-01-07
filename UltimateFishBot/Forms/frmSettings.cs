@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,15 @@ namespace UltimateFishBot.Forms
 {
     public partial class frmSettings : Form
     {
+        private enum TabulationIndex
+        {
+            GeneralFishing  = 0,
+            FindCursor      = 1,
+            HearingFishing  = 2,
+            Premium         = 3,
+            Language        = 4
+        };
+
         private MMDevice SndDevice;
 
         public frmSettings()
@@ -32,10 +42,11 @@ namespace UltimateFishBot.Forms
 
             this.Text                       = Translate.GetTranslate("frmSettings", "TITLE");
 
-            tabSettings.TabPages[0].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_GENERAL_FISHING");
-            tabSettings.TabPages[1].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_FIND_CURSOR");
-            tabSettings.TabPages[2].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_HEARING_FISH");
-            tabSettings.TabPages[3].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_PREMIUM");
+            tabSettings.TabPages[(int)TabulationIndex.GeneralFishing].Text  = Translate.GetTranslate("frmSettings", "TAB_TITLE_GENERAL_FISHING");
+            tabSettings.TabPages[(int)TabulationIndex.FindCursor].Text      = Translate.GetTranslate("frmSettings", "TAB_TITLE_FIND_CURSOR");
+            tabSettings.TabPages[(int)TabulationIndex.HearingFishing].Text  = Translate.GetTranslate("frmSettings", "TAB_TITLE_HEARING_FISH");
+            tabSettings.TabPages[(int)TabulationIndex.Premium].Text         = Translate.GetTranslate("frmSettings", "TAB_TITLE_PREMIUM");
+            tabSettings.TabPages[(int)TabulationIndex.Language].Text        = Translate.GetTranslate("frmSettings", "TAB_TITLE_LANGUAGE");
 
             /// General
 
@@ -94,6 +105,10 @@ namespace UltimateFishBot.Forms
             LabelProcessName.Text           = Translate.GetTranslate("frmSettings", "LABEL_PROCESS_NAME");
             LabelProcessNameDesc.Text       = Translate.GetTranslate("frmSettings", "LABEL_PROCESS_NAME_DESC");
 
+            /// Language Settings
+
+            labelLanguage.Text              = Translate.GetTranslate("frmSettings", "LABEL_LANGUAGE");
+            labelLanguageDesc.Text          = Translate.GetTranslate("frmSettings", "LABEL_LANGUAGE_DESC");
 
             /*
              * Set Settings from save
@@ -142,6 +157,8 @@ namespace UltimateFishBot.Forms
             txtBaitKey7.Text        = Properties.Settings.Default.BaitKey7;
             cbAutoBait.Checked      = Properties.Settings.Default.AutoBait;
             cbRandomBait.Checked    = Properties.Settings.Default.randomBait;
+
+            LoadLanguages();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -196,8 +213,21 @@ namespace UltimateFishBot.Forms
             Properties.Settings.Default.AutoBait        = cbAutoBait.Checked;
             Properties.Settings.Default.randomBait      = cbRandomBait.Checked;
 
-            Properties.Settings.Default.Save();
-            this.Close();
+            if ((string)cmbLanguage.SelectedItem != Properties.Settings.Default.Language)
+            {
+                Properties.Settings.Default.Language = (string)cmbLanguage.SelectedItem;
+                Properties.Settings.Default.Save();
+
+                MessageBox.Show(Translate.GetTranslate("frmSettings", "LABEL_LANGUAGE_CHANGE"),
+                                Translate.GetTranslate("frmSettings", "TITLE_LANGUAGE_CHANGE"));
+
+                Application.Restart();
+            }
+            else
+            {
+                Properties.Settings.Default.Save();
+                this.Close();
+            }
         }
 
         private void tabSettings_SelectedIndexChanged(Object sender, EventArgs e)
@@ -231,6 +261,21 @@ namespace UltimateFishBot.Forms
             cmbAudio.ValueMember = "Item2";
             cmbAudio.DataSource = audioDevices;
             cmbAudio.SelectedValue = Properties.Settings.Default.AudioDevice;
+        }
+
+        private void LoadLanguages()
+        {
+            string[] languageFiles = Directory.GetFiles("./Resources/", "*.xml");
+            cmbLanguage.Items.Clear();
+
+            foreach (string file in languageFiles)
+            {
+                string tmpFile = file.Substring(12); // Remove the "./Resources/" part
+                tmpFile = tmpFile.Substring(0, tmpFile.Length - 4); // Remove the  ".xml" part
+                cmbLanguage.Items.Add(tmpFile);
+            }
+
+            cmbLanguage.SelectedItem = Properties.Settings.Default.Language;
         }
         
         private void tmeAudio_Tick(Object sender, EventArgs e)

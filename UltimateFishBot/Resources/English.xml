@@ -61,6 +61,7 @@
         <TAB_TITLE_FIND_CURSOR>Finding the Cursor</TAB_TITLE_FIND_CURSOR>
         <TAB_TITLE_HEARING_FISH>Hearing the Fish</TAB_TITLE_HEARING_FISH>
         <TAB_TITLE_PREMIUM>Premium Settings</TAB_TITLE_PREMIUM>
+        <TAB_TITLE_LANGUAGE>Language</TAB_TITLE_LANGUAGE>
 
         <!-- General Fishing -->
         <LABEL_DELAY_AFTER_CAST>Delay After Cast:</LABEL_DELAY_AFTER_CAST>
@@ -118,5 +119,14 @@
 
         <LABEL_PROCESS_NAME>WoW Process Name:</LABEL_PROCESS_NAME>
         <LABEL_PROCESS_NAME_DESC>The name of the process to activate (this rarely changes) but has been updated with new expansions in the past.</LABEL_PROCESS_NAME_DESC>
+
+        <!-- Language  -->
+        <LABEL_LANGUAGE>Language XML File name:</LABEL_LANGUAGE>
+        <LABEL_LANGUAGE_DESC>
+          Select the language file that you want to use.
+          Language XML Files must be found in Resources folder.
+        </LABEL_LANGUAGE_DESC>
+        <TITLE_LANGUAGE_CHANGE>Restart Required.</TITLE_LANGUAGE_CHANGE>
+        <LABEL_LANGUAGE_CHANGE>You need to restart the application in order to apply the language change.</LABEL_LANGUAGE_CHANGE>
     </frmSettings>
 </translation>

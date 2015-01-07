@@ -118,7 +118,7 @@
   <ItemGroup>
     <Content Include="Resources\CoreAudioApi.dll" />
     <Content Include="Resources\fisherman.gif" />
-    <Content Include="Resources\translate.xml">
+    <Content Include="Resources\English.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
