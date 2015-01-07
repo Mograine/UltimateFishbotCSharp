@@ -54,6 +54,8 @@
         <LABEL_APPLY_BAIT>Applying Bait {0}...</LABEL_APPLY_BAIT>
     </manager>
     <frmSettings>
+        <TITLE>Settings</TITLE>
+
         <!-- Tabs Titles -->
         <TAB_TITLE_GENERAL_FISHING>General Fishing</TAB_TITLE_GENERAL_FISHING>
         <TAB_TITLE_FIND_CURSOR>Finding the Cursor</TAB_TITLE_FIND_CURSOR>

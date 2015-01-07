@@ -25,7 +25,7 @@ namespace UltimateFishBot.Forms
             LabelTitle.Text = Translate.GetTranslate("frmCode", "LIBELLE_TITLE");
             LabelDesc.Text  = Translate.GetTranslate("frmCode", "LIBELLE_DESC", Properties.Settings.Default.Startup);
 
-            //Process.Start("http://www.fishbot.net/code.html");
+            Process.Start("http://www.fishbot.net/code.html");
             this.Activate();
         }
 

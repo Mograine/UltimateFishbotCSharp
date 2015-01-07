@@ -30,6 +30,8 @@ namespace UltimateFishBot.Forms
              * Set Text from translate file
              */
 
+            this.Text                       = Translate.GetTranslate("frmSettings", "TITLE");
+
             tabSettings.TabPages[0].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_GENERAL_FISHING");
             tabSettings.TabPages[1].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_FIND_CURSOR");
             tabSettings.TabPages[2].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_HEARING_FISH");
