@@ -30,71 +30,116 @@ namespace UltimateFishBot.Forms
              * Set Text from translate file
              */
 
-            tabSettings.TabPages[0].Text = Translate.GetTranslate("frmSettings", "TAB_TITLE_GENERAL_FISHING");
-            tabSettings.TabPages[1].Text = Translate.GetTranslate("frmSettings", "TAB_TITLE_FIND_CURSOR");
-            tabSettings.TabPages[2].Text = Translate.GetTranslate("frmSettings", "TAB_TITLE_HEARING_FISH");
-            tabSettings.TabPages[3].Text = Translate.GetTranslate("frmSettings", "TAB_TITLE_PREMIUM");
+            tabSettings.TabPages[0].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_GENERAL_FISHING");
+            tabSettings.TabPages[1].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_FIND_CURSOR");
+            tabSettings.TabPages[2].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_HEARING_FISH");
+            tabSettings.TabPages[3].Text    = Translate.GetTranslate("frmSettings", "TAB_TITLE_PREMIUM");
 
             /// General
 
-            LabelDelayCast.Text = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_CAST");
-            LabelDelayCastDesc.Text = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_CAST_DESC");
+            LabelDelayCast.Text             = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_CAST");
+            LabelDelayCastDesc.Text         = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_CAST_DESC");
 
-            LabelFishWait.Text = Translate.GetTranslate("frmSettings", "LABEL_FISH_WAIT_LIMIT");
-            LabelFishWaitDesc.Text = Translate.GetTranslate("frmSettings", "LABEL_FISH_WAIT_LIMIT_DESC");
+            LabelFishWait.Text              = Translate.GetTranslate("frmSettings", "LABEL_FISH_WAIT_LIMIT");
+            LabelFishWaitDesc.Text          = Translate.GetTranslate("frmSettings", "LABEL_FISH_WAIT_LIMIT_DESC");
 
-            LabelDelayLooting.Text = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_LOOTING");
-            LabelDelayLootingDesc.Text = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_LOOTING_DESC");
+            LabelDelayLooting.Text          = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_LOOTING");
+            LabelDelayLootingDesc.Text      = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_LOOTING_DESC");
 
             /// Finding the Cursor
+
+            LabelScanningSteps.Text         = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_STEPS");
+            LabelScanningStepsDesc.Text     = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_STEPS_DESC");
+
+            LabelScanningDelay.Text         = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_DELAY");
+            LabelScanningDelayDesc.Text     = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_DELAY_DESC");
+
+            LabelScanningRetries.Text       = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_RETRIES");
+            LabelScanningRetriesDesc.Text   = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_RETRIES_DESC");
+
+            /// Hearing the Fish
+
+            LabelSplashThreshold.Text       = Translate.GetTranslate("frmSettings", "LABEL_SPLASH_THRESHOLD");
+            LabelSplashThresholdDesc.Text   = Translate.GetTranslate("frmSettings", "LABEL_SPLASH_THRESHOLD_DESC");
+
+            LabelAudioDevice.Text           = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_DELAY");
+            LabelAudioDeviceDesc.Text       = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_DELAY_DESC");
+
+            /// Premium Settings
+
+            LabelCastKey.Text               = Translate.GetTranslate("frmSettings", "LABEL_CAST_KEY");
+            LabelLureKey.Text               = Translate.GetTranslate("frmSettings", "LABEL_LURE_KEY");
+            LabelHearthKey.Text             = Translate.GetTranslate("frmSettings", "LABEL_HEARTHSTONE_KEY");
+            LabelRaftKey.Text               = Translate.GetTranslate("frmSettings", "LABEL_RAFT_KEY");
+            LabelCharmKey.Text              = Translate.GetTranslate("frmSettings", "LABEL_CHARM_KEY");
+            LabelBaitKey1.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_1");
+            LabelBaitKey2.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_2");
+            LabelBaitKey3.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_3");
+            LabelBaitKey4.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_4");
+            LabelBaitKey5.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_5");
+            LabelBaitKey6.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_6");
+            LabelBaitKey7.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_7");
+
+            cbAlt.Text                      = Translate.GetTranslate("frmSettings", "CB_ALT_KEY");
+            cbAutoLure.Text                 = Translate.GetTranslate("frmSettings", "CB_AUTO_LURE");
+            cbHearth.Text                   = Translate.GetTranslate("frmSettings", "CB_AUTO_HEARTHSTONE");
+            cbApplyRaft.Text                = Translate.GetTranslate("frmSettings", "CB_AUTO_RAFT");
+            cbApplyCharm.Text               = Translate.GetTranslate("frmSettings", "CB_AUTO_CHARM");
+            cbAutoBait.Text                 = Translate.GetTranslate("frmSettings", "CB_AUTO_BAIT");
+            cbRandomBait.Text               = Translate.GetTranslate("frmSettings", "CB_RANDOM_BAIT");
+            cbShiftLoot.Text                = Translate.GetTranslate("frmSettings", "CB_SHIFT_LOOT");
+
+            LabelProcessName.Text           = Translate.GetTranslate("frmSettings", "LABEL_PROCESS_NAME");
+            LabelProcessNameDesc.Text       = Translate.GetTranslate("frmSettings", "LABEL_PROCESS_NAME_DESC");
+
 
             /*
              * Set Settings from save
              */
 
             /// General
-            txtCastDelay.Text = Properties.Settings.Default.CastingDelay.ToString();
-            txtLootingDelay.Text = Properties.Settings.Default.LootingDelay.ToString();
-            txtFishWait.Text = Properties.Settings.Default.FishWait.ToString();
+            txtCastDelay.Text       = Properties.Settings.Default.CastingDelay.ToString();
+            txtLootingDelay.Text    = Properties.Settings.Default.LootingDelay.ToString();
+            txtFishWait.Text        = Properties.Settings.Default.FishWait.ToString();
 
             /// Finding the Cursor
-            txtDelay.Text = Properties.Settings.Default.ScanningDelay.ToString();
-            txtRetries.Text = Properties.Settings.Default.ScanningRetries.ToString();
-            txtScanSteps.Text = Properties.Settings.Default.ScanningSteps.ToString();
+            txtDelay.Text           = Properties.Settings.Default.ScanningDelay.ToString();
+            txtRetries.Text         = Properties.Settings.Default.ScanningRetries.ToString();
+            txtScanSteps.Text       = Properties.Settings.Default.ScanningSteps.ToString();
 
             /// Hearing the Fish
-            txtSplash.Text = Properties.Settings.Default.SplashLimit.ToString();
+            txtSplash.Text          = Properties.Settings.Default.SplashLimit.ToString();
             LoadAudioDevices();
 
             /// Premium Settings
-            txtProcName.Text = Properties.Settings.Default.ProcName;
-            cbAutoLure.Checked = Properties.Settings.Default.AutoLure;
-            cbHearth.Checked = Properties.Settings.Default.SwapGear;
-            cbAlt.Checked = Properties.Settings.Default.UseAltKey;
+            txtProcName.Text        = Properties.Settings.Default.ProcName;
+            cbAutoLure.Checked      = Properties.Settings.Default.AutoLure;
+            cbHearth.Checked        = Properties.Settings.Default.SwapGear;
+            cbAlt.Checked           = Properties.Settings.Default.UseAltKey;
 
-            txtFishKey.Text = Properties.Settings.Default.FishKey;
-            txtLureKey.Text = Properties.Settings.Default.LureKey;
-            txtHearthKey.Text = Properties.Settings.Default.HearthKey;
-            cbHearth.Checked = Properties.Settings.Default.AutoHearth;
-            txtHearthTime.Text = Properties.Settings.Default.HearthTime.ToString();
+            txtFishKey.Text         = Properties.Settings.Default.FishKey;
+            txtLureKey.Text         = Properties.Settings.Default.LureKey;
+            txtHearthKey.Text       = Properties.Settings.Default.HearthKey;
+            cbHearth.Checked        = Properties.Settings.Default.AutoHearth;
+            txtHearthTime.Text      = Properties.Settings.Default.HearthTime.ToString();
 
             // MoP Premium (Angler's Raft & Ancient Pandaren Fishing Charm)
-            txtCharmKey.Text = Properties.Settings.Default.CharmKey;
-            txtRaftKey.Text = Properties.Settings.Default.RaftKey;
-            cbApplyRaft.Checked = Properties.Settings.Default.AutoRaft;
-            cbApplyCharm.Checked = Properties.Settings.Default.AutoCharm;
-            cbShiftLoot.Checked = Properties.Settings.Default.ShiftLoot;
+            txtCharmKey.Text        = Properties.Settings.Default.CharmKey;
+            txtRaftKey.Text         = Properties.Settings.Default.RaftKey;
+            cbApplyRaft.Checked     = Properties.Settings.Default.AutoRaft;
+            cbApplyCharm.Checked    = Properties.Settings.Default.AutoCharm;
+            cbShiftLoot.Checked     = Properties.Settings.Default.ShiftLoot;
 
             // WoD Premium (Bait)
-            txtBaitKey1.Text = Properties.Settings.Default.BaitKey1;
-            txtBaitKey2.Text = Properties.Settings.Default.BaitKey2;
-            txtBaitKey3.Text = Properties.Settings.Default.BaitKey3;
-            txtBaitKey4.Text = Properties.Settings.Default.BaitKey4;
-            txtBaitKey5.Text = Properties.Settings.Default.BaitKey5;
-            txtBaitKey6.Text = Properties.Settings.Default.BaitKey6;
-            txtBaitKey7.Text = Properties.Settings.Default.BaitKey7;
-            cbAutoBait.Checked = Properties.Settings.Default.AutoBait;
-            cbRandomBait.Checked = Properties.Settings.Default.randomBait;
+            txtBaitKey1.Text        = Properties.Settings.Default.BaitKey1;
+            txtBaitKey2.Text        = Properties.Settings.Default.BaitKey2;
+            txtBaitKey3.Text        = Properties.Settings.Default.BaitKey3;
+            txtBaitKey4.Text        = Properties.Settings.Default.BaitKey4;
+            txtBaitKey5.Text        = Properties.Settings.Default.BaitKey5;
+            txtBaitKey6.Text        = Properties.Settings.Default.BaitKey6;
+            txtBaitKey7.Text        = Properties.Settings.Default.BaitKey7;
+            cbAutoBait.Checked      = Properties.Settings.Default.AutoBait;
+            cbRandomBait.Checked    = Properties.Settings.Default.randomBait;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -105,49 +150,49 @@ namespace UltimateFishBot.Forms
         private void btnSave_Click(object sender, EventArgs e)
         {
             /// General
-            Properties.Settings.Default.CastingDelay = int.Parse(txtCastDelay.Text);
-            Properties.Settings.Default.LootingDelay = int.Parse(txtLootingDelay.Text);
-            Properties.Settings.Default.FishWait = int.Parse(txtFishWait.Text);
+            Properties.Settings.Default.CastingDelay    = int.Parse(txtCastDelay.Text);
+            Properties.Settings.Default.LootingDelay    = int.Parse(txtLootingDelay.Text);
+            Properties.Settings.Default.FishWait        = int.Parse(txtFishWait.Text);
             
             /// Finding the Cursor
-            Properties.Settings.Default.ScanningDelay = int.Parse(txtDelay.Text);
+            Properties.Settings.Default.ScanningDelay   = int.Parse(txtDelay.Text);
             Properties.Settings.Default.ScanningRetries = int.Parse(txtRetries.Text);
-            Properties.Settings.Default.ScanningSteps = int.Parse(txtScanSteps.Text);
+            Properties.Settings.Default.ScanningSteps   = int.Parse(txtScanSteps.Text);
             
             /// Hearing the Fish
-            Properties.Settings.Default.SplashLimit = int.Parse(txtSplash.Text);
-            Properties.Settings.Default.AudioDevice = (string)cmbAudio.SelectedValue;
+            Properties.Settings.Default.SplashLimit     = int.Parse(txtSplash.Text);
+            Properties.Settings.Default.AudioDevice     = (string)cmbAudio.SelectedValue;
 
             /// Premium Settings
 
-            Properties.Settings.Default.ProcName = txtProcName.Text;
-            Properties.Settings.Default.AutoLure = cbAutoLure.Checked;
-            Properties.Settings.Default.SwapGear = cbHearth.Checked;
-            Properties.Settings.Default.UseAltKey = cbAlt.Checked;
+            Properties.Settings.Default.ProcName        = txtProcName.Text;
+            Properties.Settings.Default.AutoLure        = cbAutoLure.Checked;
+            Properties.Settings.Default.SwapGear        = cbHearth.Checked;
+            Properties.Settings.Default.UseAltKey       = cbAlt.Checked;
 
-            Properties.Settings.Default.FishKey = txtFishKey.Text;
-            Properties.Settings.Default.LureKey = txtLureKey.Text;
-            Properties.Settings.Default.HearthKey = txtHearthKey.Text;
-            Properties.Settings.Default.AutoHearth = cbHearth.Checked;
-            Properties.Settings.Default.HearthTime = int.Parse(txtHearthTime.Text);
+            Properties.Settings.Default.FishKey         = txtFishKey.Text;
+            Properties.Settings.Default.LureKey         = txtLureKey.Text;
+            Properties.Settings.Default.HearthKey       = txtHearthKey.Text;
+            Properties.Settings.Default.AutoHearth      = cbHearth.Checked;
+            Properties.Settings.Default.HearthTime      = int.Parse(txtHearthTime.Text);
 
             // MoP Premium (Angler's Raft & Ancient Pandaren Fishing Charm)
-            Properties.Settings.Default.CharmKey = txtCharmKey.Text;
-            Properties.Settings.Default.RaftKey = txtRaftKey.Text;
-            Properties.Settings.Default.AutoRaft = cbApplyRaft.Checked;
-            Properties.Settings.Default.AutoCharm = cbApplyCharm.Checked;
-            Properties.Settings.Default.ShiftLoot = cbShiftLoot.Checked;
+            Properties.Settings.Default.CharmKey        = txtCharmKey.Text;
+            Properties.Settings.Default.RaftKey         = txtRaftKey.Text;
+            Properties.Settings.Default.AutoRaft        = cbApplyRaft.Checked;
+            Properties.Settings.Default.AutoCharm       = cbApplyCharm.Checked;
+            Properties.Settings.Default.ShiftLoot       = cbShiftLoot.Checked;
 
             // WoD Premium (Bait)
-            Properties.Settings.Default.BaitKey1 = txtBaitKey1.Text;
-            Properties.Settings.Default.BaitKey2 = txtBaitKey2.Text;
-            Properties.Settings.Default.BaitKey3 = txtBaitKey3.Text;
-            Properties.Settings.Default.BaitKey4 = txtBaitKey4.Text;
-            Properties.Settings.Default.BaitKey5 = txtBaitKey5.Text;
-            Properties.Settings.Default.BaitKey6 = txtBaitKey6.Text;
-            Properties.Settings.Default.BaitKey7 = txtBaitKey7.Text;
-            Properties.Settings.Default.AutoBait = cbAutoBait.Checked;
-            Properties.Settings.Default.randomBait = cbRandomBait.Checked;
+            Properties.Settings.Default.BaitKey1        = txtBaitKey1.Text;
+            Properties.Settings.Default.BaitKey2        = txtBaitKey2.Text;
+            Properties.Settings.Default.BaitKey3        = txtBaitKey3.Text;
+            Properties.Settings.Default.BaitKey4        = txtBaitKey4.Text;
+            Properties.Settings.Default.BaitKey5        = txtBaitKey5.Text;
+            Properties.Settings.Default.BaitKey6        = txtBaitKey6.Text;
+            Properties.Settings.Default.BaitKey7        = txtBaitKey7.Text;
+            Properties.Settings.Default.AutoBait        = cbAutoBait.Checked;
+            Properties.Settings.Default.randomBait      = cbRandomBait.Checked;
 
             Properties.Settings.Default.Save();
             this.Close();

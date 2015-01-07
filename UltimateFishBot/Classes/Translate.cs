@@ -20,7 +20,7 @@ namespace UltimateFishBot.Classes
 
                 try
                 {
-                    doc.Load("./translate.xml");
+                    doc.Load("./Resources/translate.xml");
                 }
                 catch (Exception ex)
                 {
@@ -48,10 +48,7 @@ namespace UltimateFishBot.Classes
                         if (node.Name == nodeName)
                             returnText = node.InnerText;
 
-                returnText = string.Join(
-                                "\n",
-                                returnText.Split('\n').Select(s => s.Trim()));
-
+                returnText = string.Join("\n", returnText.Split('\n').Select(s => s.Trim()));
                 returnText = String.Format(returnText, list);
             }
             catch (Exception ex)

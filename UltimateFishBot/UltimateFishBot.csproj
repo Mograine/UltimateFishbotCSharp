@@ -118,6 +118,9 @@
   <ItemGroup>
     <Content Include="Resources\CoreAudioApi.dll" />
     <Content Include="Resources\fisherman.gif" />
+    <Content Include="Resources\translate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
