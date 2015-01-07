@@ -54,6 +54,7 @@
     <Compile Include="Classes\BodyParts\Mouth.cs" />
     <Compile Include="Classes\Helpers\Win32.cs" />
     <Compile Include="Classes\Manager.cs" />
+    <Compile Include="Classes\Translate.cs" />
     <Compile Include="Forms\frmCode.cs">
       <SubType>Form</SubType>
     </Compile>

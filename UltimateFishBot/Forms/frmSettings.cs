@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UltimateFishBot.Classes;
 
 namespace UltimateFishBot.Forms
 {
@@ -25,6 +26,32 @@ namespace UltimateFishBot.Forms
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
+            /*
+             * Set Text from translate file
+             */
+
+            tabSettings.TabPages[0].Text = Translate.GetTranslate("frmSettings", "TAB_TITLE_GENERAL_FISHING");
+            tabSettings.TabPages[1].Text = Translate.GetTranslate("frmSettings", "TAB_TITLE_FIND_CURSOR");
+            tabSettings.TabPages[2].Text = Translate.GetTranslate("frmSettings", "TAB_TITLE_HEARING_FISH");
+            tabSettings.TabPages[3].Text = Translate.GetTranslate("frmSettings", "TAB_TITLE_PREMIUM");
+
+            /// General
+
+            LabelDelayCast.Text = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_CAST");
+            LabelDelayCastDesc.Text = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_CAST_DESC");
+
+            LabelFishWait.Text = Translate.GetTranslate("frmSettings", "LABEL_FISH_WAIT_LIMIT");
+            LabelFishWaitDesc.Text = Translate.GetTranslate("frmSettings", "LABEL_FISH_WAIT_LIMIT_DESC");
+
+            LabelDelayLooting.Text = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_LOOTING");
+            LabelDelayLootingDesc.Text = Translate.GetTranslate("frmSettings", "LABEL_DELAY_AFTER_LOOTING_DESC");
+
+            /// Finding the Cursor
+
+            /*
+             * Set Settings from save
+             */
+
             /// General
             txtCastDelay.Text = Properties.Settings.Default.CastingDelay.ToString();
             txtLootingDelay.Text = Properties.Settings.Default.LootingDelay.ToString();

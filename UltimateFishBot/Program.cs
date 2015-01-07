@@ -19,11 +19,8 @@ namespace UltimateFishBot
             Application.SetCompatibleTextRenderingDefault(false);
 
             if (Properties.Settings.Default.Startup >= 3)
-            {
-                frmCode codeForm = new frmCode();
-                if (codeForm.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                if (new frmCode().ShowDialog() != System.Windows.Forms.DialogResult.OK)
                     return;
-            }
 
             ++Properties.Settings.Default.Startup;
             Properties.Settings.Default.Save();

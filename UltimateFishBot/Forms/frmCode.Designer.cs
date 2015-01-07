@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
+            this.LabelTitle = new System.Windows.Forms.Label();
+            this.LabelDesc = new System.Windows.Forms.Label();
             this.TextBox1 = new System.Windows.Forms.TextBox();
             this.Button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,25 +46,25 @@
             this.LinkLabel1.Text = "www.FishBot.net/code.html";
             this.LinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
-            // Label2
+            // LabelTitle
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.Color.Red;
-            this.Label2.Location = new System.Drawing.Point(110, 8);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(186, 20);
-            this.Label2.TabIndex = 7;
-            this.Label2.Text = "Relax.....It\'s Still Free!";
+            this.LabelTitle.AutoSize = true;
+            this.LabelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTitle.ForeColor = System.Drawing.Color.Red;
+            this.LabelTitle.Location = new System.Drawing.Point(110, 8);
+            this.LabelTitle.Name = "LabelTitle";
+            this.LabelTitle.Size = new System.Drawing.Size(186, 20);
+            this.LabelTitle.TabIndex = 7;
+            this.LabelTitle.Text = "Relax.....It\'s Still Free!";
             // 
-            // Label1
+            // LabelDesc
             // 
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(12, 44);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(418, 126);
-            this.Label1.TabIndex = 8;
-            this.Label1.Text = "Label1";
+            this.LabelDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDesc.Location = new System.Drawing.Point(12, 44);
+            this.LabelDesc.Name = "LabelDesc";
+            this.LabelDesc.Size = new System.Drawing.Size(418, 126);
+            this.LabelDesc.TabIndex = 8;
+            this.LabelDesc.Text = "Label1";
             // 
             // TextBox1
             // 
@@ -92,8 +92,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 286);
             this.Controls.Add(this.LinkLabel1);
-            this.Controls.Add(this.Label2);
-            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.LabelTitle);
+            this.Controls.Add(this.LabelDesc);
             this.Controls.Add(this.TextBox1);
             this.Controls.Add(this.Button2);
             this.Name = "frmCode";
@@ -107,8 +107,8 @@
         #endregion
 
         internal System.Windows.Forms.LinkLabel LinkLabel1;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Label Label1;
+        internal System.Windows.Forms.Label LabelTitle;
+        internal System.Windows.Forms.Label LabelDesc;
         internal System.Windows.Forms.TextBox TextBox1;
         internal System.Windows.Forms.Button Button2;
     }

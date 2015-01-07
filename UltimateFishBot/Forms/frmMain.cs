@@ -21,6 +21,15 @@ namespace UltimateFishBot
             m_manager = new Manager(this);
         }
 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            btnStart.Text       = Translate.GetTranslate("frmMain", "BUTTON_START");
+            btnStop.Text        = Translate.GetTranslate("frmMain", "BUTTON_STOP");
+            btnSettings.Text    = Translate.GetTranslate("frmMain", "BUTTON_SETTINGS");
+            btnHowTo.Text       = Translate.GetTranslate("frmMain", "BUTTON_HTU");
+            btnClose.Text       = Translate.GetTranslate("frmMain", "BUTTON_EXIT");
+        }
+
         private void btnStart_Click(object sender, EventArgs e)
         {
             if (   m_manager.GetActualState() != Manager.FishingState.Stopped
@@ -30,14 +39,14 @@ namespace UltimateFishBot
             if (m_manager.GetActualState() == Manager.FishingState.Stopped)
             {
                 m_manager.Start();
-                btnStart.Text = "Resume";
-                btnStop.Text = "Pause";
-                lblStatus.Text = "Started";
+                btnStart.Text = Translate.GetTranslate("frmMain", "BUTTON_START");
+                btnStop.Text = Translate.GetTranslate("frmMain", "BUTTON_PAUSE");
+                lblStatus.Text = Translate.GetTranslate("frmMain", "LABEL_STARTED");
             }
             else
             {
                 m_manager.Resume();
-                lblStatus.Text = "Resumed";
+                lblStatus.Text = Translate.GetTranslate("frmMain", "LABEL_RESUMED");
             }
         }
 
@@ -49,15 +58,16 @@ namespace UltimateFishBot
             if (m_manager.GetActualState() == Manager.FishingState.Paused)
             {
                 m_manager.Stop();
-                btnStart.Text = "Start";
-                btnStop.Text = "Stop";
-                lblStatus.Text = "Stopped";
+                btnStart.Text = Translate.GetTranslate("frmMain", "BUTTON_START");
+                btnStop.Text = Translate.GetTranslate("frmMain", "BUTTON_STOP");
+                lblStatus.Text = Translate.GetTranslate("frmMain", "LABEL_STOPPED");
             }
             else
             {
                 m_manager.Pause();
-                btnStop.Text = "Stop";
-                lblStatus.Text = "Paused";
+                btnStart.Text = Translate.GetTranslate("frmMain", "BUTTON_RESUME");
+                btnStop.Text = Translate.GetTranslate("frmMain", "BUTTON_STOP");
+                lblStatus.Text = Translate.GetTranslate("frmMain", "LABEL_PAUSED");
             }
         }
 

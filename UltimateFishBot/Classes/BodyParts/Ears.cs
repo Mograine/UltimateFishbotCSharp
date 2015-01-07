@@ -37,7 +37,7 @@ namespace UltimateFishBot.Classes.BodyParts
         private void ListenTimerTick(Object myObject, EventArgs myEventArgs)
         {
             // Get the current level
-            int currentVolumnLevel = (int)SndDevice.AudioMeterInformation.MasterPeakValue * 100;
+            int currentVolumnLevel = (int)(SndDevice.AudioMeterInformation.MasterPeakValue * 100);
             m_volumeQueue.Enqueue(currentVolumnLevel);
 
             // Keep a running queue of the last X sounds as a reference point

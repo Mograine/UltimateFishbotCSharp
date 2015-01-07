@@ -8,13 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UltimateFishBot.Classes;
 
 namespace UltimateFishBot.Forms
 {
     public partial class frmCode : Form
     {
-        private int m_count;
-
         public frmCode()
         {
             InitializeComponent();
@@ -22,8 +21,11 @@ namespace UltimateFishBot.Forms
 
         private void frmCode_Load(object sender, EventArgs e)
         {
-            Process.Start("http://www.fishbot.net/code.html");
-            Label1.Text = "You've used the Ultimate Fishbot " + Properties.Settings.Default.Startup + " times.  To continue using it; you need to visit the Fishbot website and enter the 3-5 digit code in the box below.  If a browser window didn't open, you can find it at www.fishbot.net/code.html - or click the link below.  I promise, it's quick and painless.";
+            this.Text       = Translate.GetTranslate("frmCode", "TITLE");
+            LabelTitle.Text = Translate.GetTranslate("frmCode", "LIBELLE_TITLE");
+            LabelDesc.Text  = Translate.GetTranslate("frmCode", "LIBELLE_DESC", Properties.Settings.Default.Startup);
+
+            //Process.Start("http://www.fishbot.net/code.html");
             this.Activate();
         }
 
@@ -38,7 +40,7 @@ namespace UltimateFishBot.Forms
             if (TextBox1.Text == Expected)
                 DialogResult = DialogResult.OK;
             else
-                MessageBox.Show("Try again!");
+                MessageBox.Show(Translate.GetTranslate("frmCode", "LIBELLE_TRY_AGAIN"));
         }
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

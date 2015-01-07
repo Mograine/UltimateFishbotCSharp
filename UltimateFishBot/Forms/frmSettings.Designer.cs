@@ -87,14 +87,14 @@
             this.tabSettings = new System.Windows.Forms.TabControl();
             this.TabPage2 = new System.Windows.Forms.TabPage();
             this.txtFishWait = new System.Windows.Forms.TextBox();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label12 = new System.Windows.Forms.Label();
+            this.LabelFishWaitDesc = new System.Windows.Forms.Label();
+            this.LabelDelayLooting = new System.Windows.Forms.Label();
             this.txtLootingDelay = new System.Windows.Forms.TextBox();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
+            this.LabelDelayLootingDesc = new System.Windows.Forms.Label();
+            this.LabelFishWait = new System.Windows.Forms.Label();
             this.txtCastDelay = new System.Windows.Forms.TextBox();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label8 = new System.Windows.Forms.Label();
+            this.LabelDelayCastDesc = new System.Windows.Forms.Label();
+            this.LabelDelayCast = new System.Windows.Forms.Label();
             this.TabPage1 = new System.Windows.Forms.TabPage();
             this.txtRetries = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
@@ -691,14 +691,14 @@
             // TabPage2
             // 
             this.TabPage2.Controls.Add(this.txtFishWait);
-            this.TabPage2.Controls.Add(this.Label11);
-            this.TabPage2.Controls.Add(this.Label12);
+            this.TabPage2.Controls.Add(this.LabelFishWaitDesc);
+            this.TabPage2.Controls.Add(this.LabelDelayLooting);
             this.TabPage2.Controls.Add(this.txtLootingDelay);
-            this.TabPage2.Controls.Add(this.Label9);
-            this.TabPage2.Controls.Add(this.Label10);
+            this.TabPage2.Controls.Add(this.LabelDelayLootingDesc);
+            this.TabPage2.Controls.Add(this.LabelFishWait);
             this.TabPage2.Controls.Add(this.txtCastDelay);
-            this.TabPage2.Controls.Add(this.Label7);
-            this.TabPage2.Controls.Add(this.Label8);
+            this.TabPage2.Controls.Add(this.LabelDelayCastDesc);
+            this.TabPage2.Controls.Add(this.LabelDelayCast);
             this.TabPage2.Location = new System.Drawing.Point(4, 22);
             this.TabPage2.Name = "TabPage2";
             this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -715,25 +715,25 @@
             this.txtFishWait.Size = new System.Drawing.Size(53, 20);
             this.txtFishWait.TabIndex = 20;
             // 
-            // Label11
+            // LabelFishWaitDesc
             // 
-            this.Label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label11.Location = new System.Drawing.Point(11, 100);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(423, 31);
-            this.Label11.TabIndex = 19;
-            this.Label11.Text = "The number of milliseconds to listen for a fish before giving up. Too long decrea" +
+            this.LabelFishWaitDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelFishWaitDesc.Location = new System.Drawing.Point(11, 100);
+            this.LabelFishWaitDesc.Name = "LabelFishWaitDesc";
+            this.LabelFishWaitDesc.Size = new System.Drawing.Size(423, 31);
+            this.LabelFishWaitDesc.TabIndex = 19;
+            this.LabelFishWaitDesc.Text = "The number of milliseconds to listen for a fish before giving up. Too long decrea" +
     "se bots effectiveness, too short and you miss fish.";
             // 
-            // Label12
+            // LabelDelayLooting
             // 
-            this.Label12.AutoSize = true;
-            this.Label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label12.Location = new System.Drawing.Point(8, 144);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(120, 13);
-            this.Label12.TabIndex = 18;
-            this.Label12.Text = "Delay After Looting:";
+            this.LabelDelayLooting.AutoSize = true;
+            this.LabelDelayLooting.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDelayLooting.Location = new System.Drawing.Point(8, 144);
+            this.LabelDelayLooting.Name = "LabelDelayLooting";
+            this.LabelDelayLooting.Size = new System.Drawing.Size(120, 13);
+            this.LabelDelayLooting.TabIndex = 18;
+            this.LabelDelayLooting.Text = "Delay After Looting:";
             // 
             // txtLootingDelay
             // 
@@ -743,24 +743,24 @@
             this.txtLootingDelay.Size = new System.Drawing.Size(53, 20);
             this.txtLootingDelay.TabIndex = 17;
             // 
-            // Label9
+            // LabelDelayLootingDesc
             // 
-            this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.Location = new System.Drawing.Point(11, 164);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(423, 20);
-            this.Label9.TabIndex = 16;
-            this.Label9.Text = "The number of milliseconds to wait after looting a fish.";
+            this.LabelDelayLootingDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDelayLootingDesc.Location = new System.Drawing.Point(11, 164);
+            this.LabelDelayLootingDesc.Name = "LabelDelayLootingDesc";
+            this.LabelDelayLootingDesc.Size = new System.Drawing.Size(423, 20);
+            this.LabelDelayLootingDesc.TabIndex = 16;
+            this.LabelDelayLootingDesc.Text = "The number of milliseconds to wait after looting a fish.";
             // 
-            // Label10
+            // LabelFishWait
             // 
-            this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.Location = new System.Drawing.Point(8, 80);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(94, 13);
-            this.Label10.TabIndex = 15;
-            this.Label10.Text = "Fish Wait Limit:";
+            this.LabelFishWait.AutoSize = true;
+            this.LabelFishWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelFishWait.Location = new System.Drawing.Point(8, 80);
+            this.LabelFishWait.Name = "LabelFishWait";
+            this.LabelFishWait.Size = new System.Drawing.Size(94, 13);
+            this.LabelFishWait.TabIndex = 15;
+            this.LabelFishWait.Text = "Fish Wait Limit:";
             // 
             // txtCastDelay
             // 
@@ -770,25 +770,25 @@
             this.txtCastDelay.Size = new System.Drawing.Size(53, 20);
             this.txtCastDelay.TabIndex = 14;
             // 
-            // Label7
+            // LabelDelayCastDesc
             // 
-            this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(11, 35);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(423, 31);
-            this.Label7.TabIndex = 13;
-            this.Label7.Text = "The number of milliseconds to wait after the cast before searching. Too short and" +
+            this.LabelDelayCastDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDelayCastDesc.Location = new System.Drawing.Point(11, 35);
+            this.LabelDelayCastDesc.Name = "LabelDelayCastDesc";
+            this.LabelDelayCastDesc.Size = new System.Drawing.Size(423, 31);
+            this.LabelDelayCastDesc.TabIndex = 13;
+            this.LabelDelayCastDesc.Text = "The number of milliseconds to wait after the cast before searching. Too short and" +
     " you\'ll skip the bobber, too long and you\'ll waste time.";
             // 
-            // Label8
+            // LabelDelayCast
             // 
-            this.Label8.AutoSize = true;
-            this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(8, 15);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(103, 13);
-            this.Label8.TabIndex = 12;
-            this.Label8.Text = "Delay After Cast:";
+            this.LabelDelayCast.AutoSize = true;
+            this.LabelDelayCast.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDelayCast.Location = new System.Drawing.Point(8, 15);
+            this.LabelDelayCast.Name = "LabelDelayCast";
+            this.LabelDelayCast.Size = new System.Drawing.Size(103, 13);
+            this.LabelDelayCast.TabIndex = 12;
+            this.LabelDelayCast.Text = "Delay After Cast:";
             // 
             // TabPage1
             // 
@@ -930,14 +930,14 @@
         internal System.Windows.Forms.TabControl tabSettings;
         internal System.Windows.Forms.TabPage TabPage2;
         internal System.Windows.Forms.TextBox txtFishWait;
-        internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.Label Label12;
+        internal System.Windows.Forms.Label LabelFishWaitDesc;
+        internal System.Windows.Forms.Label LabelDelayLooting;
         internal System.Windows.Forms.TextBox txtLootingDelay;
-        internal System.Windows.Forms.Label Label9;
-        internal System.Windows.Forms.Label Label10;
+        internal System.Windows.Forms.Label LabelDelayLootingDesc;
+        internal System.Windows.Forms.Label LabelFishWait;
         internal System.Windows.Forms.TextBox txtCastDelay;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Label8;
+        internal System.Windows.Forms.Label LabelDelayCastDesc;
+        internal System.Windows.Forms.Label LabelDelayCast;
         internal System.Windows.Forms.TabPage TabPage1;
         internal System.Windows.Forms.TextBox txtRetries;
         internal System.Windows.Forms.Label Label5;

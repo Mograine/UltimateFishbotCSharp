@@ -196,7 +196,7 @@ namespace UltimateFishBot.Classes
             if (GetActualState() != FishingState.WaitingForFish)
                 return;
 
-            m_mouth.Say("I Hear a Fish !");
+            m_mouth.Say(Translate.GetTranslate("manager", "LABEL_HEAR_FISH"));
 
             SetActualState(FishingState.Looting);
             m_hands.Loot();
@@ -225,14 +225,14 @@ namespace UltimateFishBot.Classes
                     }
 
                     // If no other action required, we can cast !
-                    m_mouth.Say("Casting...");
+                    m_mouth.Say(Translate.GetTranslate("manager", "LABEL_CASTING"));
                     SetActualState(FishingState.Casting);
                     m_hands.Cast();
                     break;
                 }
                 case FishingState.Casting:
                 {
-                    m_mouth.Say("Start Finding Bobber...");
+                    m_mouth.Say(Translate.GetTranslate("manager", "LABEL_START_FINDING"));
                     SetActualState(FishingState.SearchingForBobber);
                     m_eyes.StartLooking(); // <= The new state will be set in the Eyes
                     break;
@@ -240,13 +240,13 @@ namespace UltimateFishBot.Classes
                 case FishingState.SearchingForBobber:
                 {
                     // We are just waiting for the Eyes
-                    m_mouth.Say("Finding Bobber...");
+                    m_mouth.Say(Translate.GetTranslate("manager", "LABEL_FINDING"));
                     break;
                 }
                 case FishingState.WaitingForFish:
                 {
                     // We are waiting a detection from the Ears
-                    m_mouth.Say("Waiting for Fish (" + GetFishWaitTime() / 1000 + " / " + Properties.Settings.Default.FishWait / 1000 + " s) ...");
+                    m_mouth.Say(Translate.GetTranslate("manager", "LABEL_WAITING", GetFishWaitTime() / 1000, Properties.Settings.Default.FishWait / 1000));
 
                     if ((m_fishWaitTime += ACTION_TIMER_LENGTH) >= Properties.Settings.Default.FishWait)
                     {

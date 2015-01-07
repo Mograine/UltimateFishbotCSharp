@@ -56,28 +56,28 @@ namespace UltimateFishBot.Classes.BodyParts
             {
                 case Manager.NeededAction.HearthStone:
                 {
-                    mouth.Say("Done Fishing - Hearthing...");
+                    mouth.Say(Translate.GetTranslate("manager", "LABEL_HEARTHSTONE"));
                     actionKey = Properties.Settings.Default.HearthKey;
                     sleepTime = 0;
                     break;
                 }
                 case Manager.NeededAction.Lure:
                 {
-                    mouth.Say("Applying Lure...");
+                    mouth.Say(Translate.GetTranslate("manager", "LABEL_APPLY_LURE"));
                     actionKey = Properties.Settings.Default.LureKey;
                     sleepTime = 3;
                     break;
                 }
                 case Manager.NeededAction.Charm:
                 {
-                    mouth.Say("Applying Charm...");
+                    mouth.Say(Translate.GetTranslate("manager", "LABEL_APPLY_CHARM"));
                     actionKey = Properties.Settings.Default.CharmKey;
                     sleepTime = 3;
                     break;
                 }
                 case Manager.NeededAction.Raft:
                 {
-                    mouth.Say("Applying Raft...");
+                    mouth.Say(Translate.GetTranslate("manager", "LABEL_APPLY_RAFT"));
                     actionKey = Properties.Settings.Default.RaftKey;
                     sleepTime = 2;
                     break;
@@ -89,7 +89,7 @@ namespace UltimateFishBot.Classes.BodyParts
                     if (Properties.Settings.Default.randomBait)
                         baitIndex = new Random().Next(0, 7);
 
-                    mouth.Say("Applying Bait " + baitIndex + "...");
+                    mouth.Say(Translate.GetTranslate("manager", "LABEL_APPLY_BAIT", baitIndex));
                     actionKey = baitKeys[baitIndex];
                     sleepTime = 3;
                     break;

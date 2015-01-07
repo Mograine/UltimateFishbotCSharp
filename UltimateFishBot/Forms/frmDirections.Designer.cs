@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDirections));
             this.Button1 = new System.Windows.Forms.Button();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
+            this.Label3Desc = new System.Windows.Forms.Label();
+            this.Label3Title = new System.Windows.Forms.Label();
+            this.Label2Desc = new System.Windows.Forms.Label();
+            this.Label2Title = new System.Windows.Forms.Label();
+            this.Label1Desc = new System.Windows.Forms.Label();
+            this.Label1Title = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Button1
@@ -49,64 +49,64 @@
             this.Button1.UseVisualStyleBackColor = true;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // Label5
+            // Label3Desc
             // 
-            this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(42, 202);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(330, 26);
-            this.Label5.TabIndex = 12;
-            this.Label5.Text = "* Press Start, sit back, and let The Gorton\'s Fisherman handle things.\r\n\r\n";
+            this.Label3Desc.AutoSize = true;
+            this.Label3Desc.Location = new System.Drawing.Point(42, 202);
+            this.Label3Desc.Name = "Label3Desc";
+            this.Label3Desc.Size = new System.Drawing.Size(330, 26);
+            this.Label3Desc.TabIndex = 12;
+            this.Label3Desc.Text = "* Press Start, sit back, and let The Gorton\'s Fisherman handle things.\r\n\r\n";
             // 
-            // Label6
+            // Label3Title
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label6.Location = new System.Drawing.Point(9, 185);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(57, 13);
-            this.Label6.TabIndex = 11;
-            this.Label6.Text = "3.)  Fish!";
+            this.Label3Title.AutoSize = true;
+            this.Label3Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3Title.Location = new System.Drawing.Point(9, 185);
+            this.Label3Title.Name = "Label3Title";
+            this.Label3Title.Size = new System.Drawing.Size(57, 13);
+            this.Label3Title.TabIndex = 11;
+            this.Label3Title.Text = "3.)  Fish!";
             // 
-            // Label3
+            // Label2Desc
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(42, 114);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(291, 52);
-            this.Label3.TabIndex = 10;
-            this.Label3.Text = "* Walk to some lake/water\r\n* Zoom in as much as possible\r\n* Find a location with " +
+            this.Label2Desc.AutoSize = true;
+            this.Label2Desc.Location = new System.Drawing.Point(42, 114);
+            this.Label2Desc.Name = "Label2Desc";
+            this.Label2Desc.Size = new System.Drawing.Size(291, 52);
+            this.Label2Desc.TabIndex = 10;
+            this.Label2Desc.Text = "* Walk to some lake/water\r\n* Zoom in as much as possible\r\n* Find a location with " +
     "as little sound as possible\r\n* Avoid locations with anything that changes the mo" +
     "use icon\r\n";
             // 
-            // Label4
+            // Label2Title
             // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(9, 97);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(118, 13);
-            this.Label4.TabIndex = 9;
-            this.Label4.Text = "2.)  Find a Location";
+            this.Label2Title.AutoSize = true;
+            this.Label2Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2Title.Location = new System.Drawing.Point(9, 97);
+            this.Label2Title.Name = "Label2Title";
+            this.Label2Title.Size = new System.Drawing.Size(118, 13);
+            this.Label2Title.TabIndex = 9;
+            this.Label2Title.Text = "2.)  Find a Location";
             // 
-            // Label2
+            // Label1Desc
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(42, 26);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(396, 52);
-            this.Label2.TabIndex = 8;
-            this.Label2.Text = resources.GetString("Label2.Text");
+            this.Label1Desc.AutoSize = true;
+            this.Label1Desc.Location = new System.Drawing.Point(42, 22);
+            this.Label1Desc.Name = "Label1Desc";
+            this.Label1Desc.Size = new System.Drawing.Size(396, 52);
+            this.Label1Desc.TabIndex = 8;
+            this.Label1Desc.Text = resources.GetString("Label1Desc.Text");
             // 
-            // Label1
+            // Label1Title
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(9, 9);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(125, 13);
-            this.Label1.TabIndex = 7;
-            this.Label1.Text = "1.)  Setting Up WoW";
+            this.Label1Title.AutoSize = true;
+            this.Label1Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1Title.Location = new System.Drawing.Point(9, 9);
+            this.Label1Title.Name = "Label1Title";
+            this.Label1Title.Size = new System.Drawing.Size(125, 13);
+            this.Label1Title.TabIndex = 7;
+            this.Label1Title.Text = "1.)  Setting Up WoW";
             // 
             // frmDirections
             // 
@@ -114,14 +114,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 264);
             this.Controls.Add(this.Button1);
-            this.Controls.Add(this.Label5);
-            this.Controls.Add(this.Label6);
-            this.Controls.Add(this.Label3);
-            this.Controls.Add(this.Label4);
-            this.Controls.Add(this.Label2);
-            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.Label3Desc);
+            this.Controls.Add(this.Label3Title);
+            this.Controls.Add(this.Label2Desc);
+            this.Controls.Add(this.Label2Title);
+            this.Controls.Add(this.Label1Desc);
+            this.Controls.Add(this.Label1Title);
             this.Name = "frmDirections";
             this.Text = "frmDirections";
+            this.Load += new System.EventHandler(this.frmDirections_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,11 +131,11 @@
         #endregion
 
         internal System.Windows.Forms.Button Button1;
-        internal System.Windows.Forms.Label Label5;
-        internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label Label4;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Label Label1;
+        internal System.Windows.Forms.Label Label3Desc;
+        internal System.Windows.Forms.Label Label3Title;
+        internal System.Windows.Forms.Label Label2Desc;
+        internal System.Windows.Forms.Label Label2Title;
+        internal System.Windows.Forms.Label Label1Desc;
+        internal System.Windows.Forms.Label Label1Title;
     }
 }

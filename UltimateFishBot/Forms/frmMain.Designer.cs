@@ -129,6 +129,7 @@
             this.Controls.Add(this.btnStart);
             this.Name = "frmMain";
             this.Text = "UltimateFishBot - v 4.0";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
