@@ -20,35 +20,43 @@ namespace UltimateFishBot.Classes
 
                 try
                 {
+                    // Example : ./Resources/English.xml
                     doc.Load("./Resources/" + Properties.Settings.Default.Language + ".xml");
+                    m_elements = doc.DocumentElement;
                 }
                 catch (Exception ex)
                 {
                     Console.Out.WriteLine(ex.Message);
                 }
-
-                m_elements = doc.DocumentElement;
             }
         }
 
-        static public string GetTranslate(string form, string nodeName, params Object[] list)
+        static public string GetTranslate(string formName, string nodeName, params Object[] list)
         {
             ExtractElements();
             string returnText = "MISSING TRANSLATION";
 
+            // If we can't open the Translation file, everything will appear as "MISSING TRANSLATION"
             if (m_elements == null)
                 return returnText;
 
             try
             {
-                XmlNodeList formList = m_elements.GetElementsByTagName(form);
+                XmlNodeList formList = m_elements.GetElementsByTagName(formName);
 
+                // Try to find the correct translation for formName and nodeName
                 foreach (XmlNode mainNode in formList)
                     foreach (XmlNode node in mainNode.ChildNodes)
                         if (node.Name == nodeName)
+                        {
                             returnText = node.InnerText;
+                            break;
+                        }
 
+                // Remove the extras spaces from each lines
                 returnText = string.Join("\n", returnText.Split('\n').Select(s => s.Trim()));
+
+                // Replace {int} in text by variables. Ex : "Waiting for Fish ({0}/{1}s) ..."
                 returnText = String.Format(returnText, list);
             }
             catch (Exception ex)

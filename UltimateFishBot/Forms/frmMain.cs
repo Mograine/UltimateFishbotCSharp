@@ -28,6 +28,7 @@ namespace UltimateFishBot
             btnSettings.Text    = Translate.GetTranslate("frmMain", "BUTTON_SETTINGS");
             btnHowTo.Text       = Translate.GetTranslate("frmMain", "BUTTON_HTU");
             btnClose.Text       = Translate.GetTranslate("frmMain", "BUTTON_EXIT");
+            lblStatus.Text      = Translate.GetTranslate("frmMain", "LABEL_STOPPED");
         }
 
         private void btnStart_Click(object sender, EventArgs e)

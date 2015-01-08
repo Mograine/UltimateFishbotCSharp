@@ -4,6 +4,7 @@
         <LIBELLE_TITLE>Relax... It's still free !</LIBELLE_TITLE>
         <LIBELLE_DESC>You've used the Ultimate Fishbot {0} times. To continue using it; you need to visit the Fishbot website and enter the 3-5 digit code in the box below.  If a browser window didn't open, you can find it at www.fishbot.net/code.html - or click the link below.  I promise, it's quick and painless.</LIBELLE_DESC>
         <LIBELLE_TRY_AGAIN>Try again!</LIBELLE_TRY_AGAIN>
+        <LIBELLE_ENTER>Enter</LIBELLE_ENTER>
     </frmCode>
     <frmDirections>
         <TITLE>How to Use</TITLE>

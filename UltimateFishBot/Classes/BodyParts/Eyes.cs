@@ -30,12 +30,12 @@ namespace UltimateFishBot.Classes.BodyParts
             if (m_backgroundWorker.IsBusy)
                 return;
 
+            m_manager.SetActualState(Manager.FishingState.SearchingForBobber);
             m_backgroundWorker.RunWorkerAsync();
         }
 
         private void EyeProcess_DoWork(object sender, DoWorkEventArgs e)
         {
-            m_manager.SetActualState(Manager.FishingState.SearchingForBobber);
             LookForBobber();
         }
 
@@ -52,7 +52,7 @@ namespace UltimateFishBot.Classes.BodyParts
             m_manager.SetActualState(Manager.FishingState.WaitingForFish);
         }
 
-        private bool LookForBobber()
+        private void LookForBobber()
         {
             Win32.CursorInfo noFishCursor = Win32.GetNoFishCursor();
             Win32.CursorInfo actualCursor = noFishCursor;
@@ -87,7 +87,7 @@ namespace UltimateFishBot.Classes.BodyParts
 
                         // We found a fish !
 
-                        return true;
+                        return;
                     }
                 }
             }

@@ -21,15 +21,16 @@ namespace UltimateFishBot.Forms
 
         private void frmCode_Load(object sender, EventArgs e)
         {
-            this.Text       = Translate.GetTranslate("frmCode", "TITLE");
-            LabelTitle.Text = Translate.GetTranslate("frmCode", "LIBELLE_TITLE");
-            LabelDesc.Text  = Translate.GetTranslate("frmCode", "LIBELLE_DESC", Properties.Settings.Default.Startup);
+            this.Text           = Translate.GetTranslate("frmCode", "TITLE");
+            LabelTitle.Text     = Translate.GetTranslate("frmCode", "LIBELLE_TITLE");
+            LabelDesc.Text      = Translate.GetTranslate("frmCode", "LIBELLE_DESC", Properties.Settings.Default.Startup);
+            ButtonEnter.Text    = Translate.GetTranslate("frmCode", "LIBELLE_ENTER");
 
             Process.Start("http://www.fishbot.net/code.html");
             this.Activate();
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void ButtonEnter_Click(object sender, EventArgs e)
         {
             System.DateTime myDate = System.DateTime.Now;
             string Expected = (Convert.ToInt32(myDate.DayOfWeek) * myDate.Day * (myDate.Month - 1) * 26).ToString();

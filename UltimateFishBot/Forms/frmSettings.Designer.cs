@@ -115,9 +115,9 @@
             // LabelScanningDelayDesc
             // 
             this.LabelScanningDelayDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelScanningDelayDesc.Location = new System.Drawing.Point(9, 95);
+            this.LabelScanningDelayDesc.Location = new System.Drawing.Point(8, 112);
             this.LabelScanningDelayDesc.Name = "LabelScanningDelayDesc";
-            this.LabelScanningDelayDesc.Size = new System.Drawing.Size(423, 31);
+            this.LabelScanningDelayDesc.Size = new System.Drawing.Size(423, 59);
             this.LabelScanningDelayDesc.TabIndex = 13;
             this.LabelScanningDelayDesc.Text = "The number of milliseconds to wait before checking if the cursor has changed.  To" +
     " slow and you might not detect the bobber; but a bigger number goes slower.";
@@ -135,7 +135,7 @@
             this.LabelScanningStepsDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelScanningStepsDesc.Location = new System.Drawing.Point(6, 32);
             this.LabelScanningStepsDesc.Name = "LabelScanningStepsDesc";
-            this.LabelScanningStepsDesc.Size = new System.Drawing.Size(423, 31);
+            this.LabelScanningStepsDesc.Size = new System.Drawing.Size(423, 54);
             this.LabelScanningStepsDesc.TabIndex = 10;
             this.LabelScanningStepsDesc.Text = "The greater number of steps, the less likely you are to miss the cursor; but the " +
     "slower your scan will be.";
@@ -170,7 +170,7 @@
             // lblAudioLevel
             // 
             this.lblAudioLevel.AutoSize = true;
-            this.lblAudioLevel.Location = new System.Drawing.Point(466, 76);
+            this.lblAudioLevel.Location = new System.Drawing.Point(466, 102);
             this.lblAudioLevel.Name = "lblAudioLevel";
             this.lblAudioLevel.Size = new System.Drawing.Size(13, 13);
             this.lblAudioLevel.TabIndex = 19;
@@ -178,7 +178,7 @@
             // 
             // pgbSoundLevel
             // 
-            this.pgbSoundLevel.Location = new System.Drawing.Point(278, 73);
+            this.pgbSoundLevel.Location = new System.Drawing.Point(278, 99);
             this.pgbSoundLevel.Name = "pgbSoundLevel";
             this.pgbSoundLevel.Size = new System.Drawing.Size(182, 21);
             this.pgbSoundLevel.TabIndex = 18;
@@ -186,9 +186,9 @@
             // LabelAudioDeviceDesc
             // 
             this.LabelAudioDeviceDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelAudioDeviceDesc.Location = new System.Drawing.Point(11, 97);
+            this.LabelAudioDeviceDesc.Location = new System.Drawing.Point(11, 123);
             this.LabelAudioDeviceDesc.Name = "LabelAudioDeviceDesc";
-            this.LabelAudioDeviceDesc.Size = new System.Drawing.Size(423, 46);
+            this.LabelAudioDeviceDesc.Size = new System.Drawing.Size(423, 73);
             this.LabelAudioDeviceDesc.TabIndex = 17;
             this.LabelAudioDeviceDesc.Text = "Select the audio device that WoW is Using.  If the bot cannot \'hear\' the game, it" +
     " will never catch any fish.  If you are unsure, play some music and select each " +
@@ -200,7 +200,7 @@
             this.cmbAudio.FormattingEnabled = true;
             this.cmbAudio.Items.AddRange(new object[] {
             "Default"});
-            this.cmbAudio.Location = new System.Drawing.Point(173, 73);
+            this.cmbAudio.Location = new System.Drawing.Point(173, 99);
             this.cmbAudio.Name = "cmbAudio";
             this.cmbAudio.Size = new System.Drawing.Size(99, 21);
             this.cmbAudio.TabIndex = 16;
@@ -210,7 +210,7 @@
             // 
             this.LabelAudioDevice.AutoSize = true;
             this.LabelAudioDevice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelAudioDevice.Location = new System.Drawing.Point(8, 76);
+            this.LabelAudioDevice.Location = new System.Drawing.Point(8, 102);
             this.LabelAudioDevice.Name = "LabelAudioDevice";
             this.LabelAudioDevice.Size = new System.Drawing.Size(87, 13);
             this.LabelAudioDevice.TabIndex = 15;
@@ -229,7 +229,7 @@
             this.LabelSplashThresholdDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelSplashThresholdDesc.Location = new System.Drawing.Point(11, 31);
             this.LabelSplashThresholdDesc.Name = "LabelSplashThresholdDesc";
-            this.LabelSplashThresholdDesc.Size = new System.Drawing.Size(423, 31);
+            this.LabelSplashThresholdDesc.Size = new System.Drawing.Size(423, 65);
             this.LabelSplashThresholdDesc.TabIndex = 13;
             this.LabelSplashThresholdDesc.Text = "Determines if a given sound is loud enough to be a fish or not.  Too low and the " +
     "bot will mistake non-fish for fish.  Too high and the bot will ignore the real f" +
@@ -294,7 +294,7 @@
             // cbRandomBait
             // 
             this.cbRandomBait.AutoSize = true;
-            this.cbRandomBait.Location = new System.Drawing.Point(201, 206);
+            this.cbRandomBait.Location = new System.Drawing.Point(267, 206);
             this.cbRandomBait.Name = "cbRandomBait";
             this.cbRandomBait.Size = new System.Drawing.Size(203, 17);
             this.cbRandomBait.TabIndex = 48;
@@ -428,7 +428,7 @@
             // cbApplyCharm
             // 
             this.cbApplyCharm.AutoSize = true;
-            this.cbApplyCharm.Location = new System.Drawing.Point(201, 185);
+            this.cbApplyCharm.Location = new System.Drawing.Point(267, 185);
             this.cbApplyCharm.Name = "cbApplyCharm";
             this.cbApplyCharm.Size = new System.Drawing.Size(180, 17);
             this.cbApplyCharm.TabIndex = 33;
@@ -448,7 +448,7 @@
             // txtCharmKey
             // 
             this.txtCharmKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCharmKey.Location = new System.Drawing.Point(240, 38);
+            this.txtCharmKey.Location = new System.Drawing.Point(267, 38);
             this.txtCharmKey.Name = "txtCharmKey";
             this.txtCharmKey.Size = new System.Drawing.Size(22, 20);
             this.txtCharmKey.TabIndex = 31;
@@ -458,7 +458,7 @@
             // 
             this.LabelCharmKey.AutoSize = true;
             this.LabelCharmKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCharmKey.Location = new System.Drawing.Point(134, 41);
+            this.LabelCharmKey.Location = new System.Drawing.Point(150, 41);
             this.LabelCharmKey.Name = "LabelCharmKey";
             this.LabelCharmKey.Size = new System.Drawing.Size(100, 13);
             this.LabelCharmKey.TabIndex = 30;
@@ -467,7 +467,7 @@
             // txtRaftKey
             // 
             this.txtRaftKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRaftKey.Location = new System.Drawing.Point(100, 38);
+            this.txtRaftKey.Location = new System.Drawing.Point(108, 38);
             this.txtRaftKey.Name = "txtRaftKey";
             this.txtRaftKey.Size = new System.Drawing.Size(22, 20);
             this.txtRaftKey.TabIndex = 29;
@@ -486,7 +486,7 @@
             // txtHearthTime
             // 
             this.txtHearthTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHearthTime.Location = new System.Drawing.Point(377, 160);
+            this.txtHearthTime.Location = new System.Drawing.Point(443, 160);
             this.txtHearthTime.Name = "txtHearthTime";
             this.txtHearthTime.Size = new System.Drawing.Size(30, 20);
             this.txtHearthTime.TabIndex = 27;
@@ -495,7 +495,7 @@
             // cbAlt
             // 
             this.cbAlt.AutoSize = true;
-            this.cbAlt.Location = new System.Drawing.Point(325, 18);
+            this.cbAlt.Location = new System.Drawing.Point(365, 17);
             this.cbAlt.Name = "cbAlt";
             this.cbAlt.Size = new System.Drawing.Size(119, 17);
             this.cbAlt.TabIndex = 6;
@@ -505,7 +505,7 @@
             // cbHearth
             // 
             this.cbHearth.AutoSize = true;
-            this.cbHearth.Location = new System.Drawing.Point(201, 163);
+            this.cbHearth.Location = new System.Drawing.Point(267, 163);
             this.cbHearth.Name = "cbHearth";
             this.cbHearth.Size = new System.Drawing.Size(170, 17);
             this.cbHearth.TabIndex = 8;
@@ -563,7 +563,7 @@
             // txtHearthKey
             // 
             this.txtHearthKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHearthKey.Location = new System.Drawing.Point(275, 16);
+            this.txtHearthKey.Location = new System.Drawing.Point(337, 16);
             this.txtHearthKey.Name = "txtHearthKey";
             this.txtHearthKey.Size = new System.Drawing.Size(22, 20);
             this.txtHearthKey.TabIndex = 3;
@@ -573,7 +573,7 @@
             // 
             this.LabelHearthKey.AutoSize = true;
             this.LabelHearthKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelHearthKey.Location = new System.Drawing.Point(195, 19);
+            this.LabelHearthKey.Location = new System.Drawing.Point(241, 19);
             this.LabelHearthKey.Name = "LabelHearthKey";
             this.LabelHearthKey.Size = new System.Drawing.Size(74, 13);
             this.LabelHearthKey.TabIndex = 19;
@@ -582,7 +582,7 @@
             // txtLureKey
             // 
             this.txtLureKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLureKey.Location = new System.Drawing.Point(167, 16);
+            this.txtLureKey.Location = new System.Drawing.Point(213, 16);
             this.txtLureKey.Name = "txtLureKey";
             this.txtLureKey.Size = new System.Drawing.Size(22, 20);
             this.txtLureKey.TabIndex = 2;
@@ -592,7 +592,7 @@
             // 
             this.LabelLureKey.AutoSize = true;
             this.LabelLureKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelLureKey.Location = new System.Drawing.Point(100, 19);
+            this.LabelLureKey.Location = new System.Drawing.Point(115, 19);
             this.LabelLureKey.Name = "LabelLureKey";
             this.LabelLureKey.Size = new System.Drawing.Size(61, 13);
             this.LabelLureKey.TabIndex = 17;
@@ -601,7 +601,7 @@
             // txtFishKey
             // 
             this.txtFishKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFishKey.Location = new System.Drawing.Point(72, 16);
+            this.txtFishKey.Location = new System.Drawing.Point(87, 15);
             this.txtFishKey.Name = "txtFishKey";
             this.txtFishKey.Size = new System.Drawing.Size(22, 20);
             this.txtFishKey.TabIndex = 1;
@@ -621,7 +621,7 @@
             // 
             this.LabelBaitKey1.AutoSize = true;
             this.LabelBaitKey1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelBaitKey1.Location = new System.Drawing.Point(270, 41);
+            this.LabelBaitKey1.Location = new System.Drawing.Point(295, 41);
             this.LabelBaitKey1.Name = "LabelBaitKey1";
             this.LabelBaitKey1.Size = new System.Drawing.Size(101, 13);
             this.LabelBaitKey1.TabIndex = 35;
@@ -630,7 +630,7 @@
             // txtBaitKey1
             // 
             this.txtBaitKey1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBaitKey1.Location = new System.Drawing.Point(370, 38);
+            this.txtBaitKey1.Location = new System.Drawing.Point(402, 38);
             this.txtBaitKey1.Name = "txtBaitKey1";
             this.txtBaitKey1.Size = new System.Drawing.Size(22, 20);
             this.txtBaitKey1.TabIndex = 29;
@@ -650,7 +650,7 @@
             // 
             this.LabelScanningDelay.AutoSize = true;
             this.LabelScanningDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelScanningDelay.Location = new System.Drawing.Point(3, 75);
+            this.LabelScanningDelay.Location = new System.Drawing.Point(2, 92);
             this.LabelScanningDelay.Name = "LabelScanningDelay";
             this.LabelScanningDelay.Size = new System.Drawing.Size(100, 13);
             this.LabelScanningDelay.TabIndex = 12;
@@ -674,7 +674,7 @@
             // txtDelay
             // 
             this.txtDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDelay.Location = new System.Drawing.Point(129, 72);
+            this.txtDelay.Location = new System.Drawing.Point(128, 89);
             this.txtDelay.Name = "txtDelay";
             this.txtDelay.Size = new System.Drawing.Size(32, 20);
             this.txtDelay.TabIndex = 14;
@@ -818,7 +818,7 @@
             // txtRetries
             // 
             this.txtRetries.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRetries.Location = new System.Drawing.Point(129, 133);
+            this.txtRetries.Location = new System.Drawing.Point(129, 174);
             this.txtRetries.Name = "txtRetries";
             this.txtRetries.Size = new System.Drawing.Size(32, 20);
             this.txtRetries.TabIndex = 17;
@@ -826,9 +826,9 @@
             // LabelScanningRetriesDesc
             // 
             this.LabelScanningRetriesDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelScanningRetriesDesc.Location = new System.Drawing.Point(6, 156);
+            this.LabelScanningRetriesDesc.Location = new System.Drawing.Point(6, 197);
             this.LabelScanningRetriesDesc.Name = "LabelScanningRetriesDesc";
-            this.LabelScanningRetriesDesc.Size = new System.Drawing.Size(423, 16);
+            this.LabelScanningRetriesDesc.Size = new System.Drawing.Size(423, 59);
             this.LabelScanningRetriesDesc.TabIndex = 16;
             this.LabelScanningRetriesDesc.Text = "How many times to run the search pattern.";
             // 
@@ -836,7 +836,7 @@
             // 
             this.LabelScanningRetries.AutoSize = true;
             this.LabelScanningRetries.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelScanningRetries.Location = new System.Drawing.Point(3, 136);
+            this.LabelScanningRetries.Location = new System.Drawing.Point(3, 177);
             this.LabelScanningRetries.Name = "LabelScanningRetries";
             this.LabelScanningRetries.Size = new System.Drawing.Size(108, 13);
             this.LabelScanningRetries.TabIndex = 15;

@@ -32,7 +32,7 @@
             this.LabelTitle = new System.Windows.Forms.Label();
             this.LabelDesc = new System.Windows.Forms.Label();
             this.TextBox1 = new System.Windows.Forms.TextBox();
-            this.Button2 = new System.Windows.Forms.Button();
+            this.ButtonEnter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LinkLabel1
@@ -76,15 +76,15 @@
             this.TextBox1.TabIndex = 5;
             this.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Button2
+            // ButtonEnter
             // 
-            this.Button2.Location = new System.Drawing.Point(184, 255);
-            this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(75, 23);
-            this.Button2.TabIndex = 6;
-            this.Button2.Text = "Enter";
-            this.Button2.UseVisualStyleBackColor = true;
-            this.Button2.Click += new System.EventHandler(this.Button2_Click);
+            this.ButtonEnter.Location = new System.Drawing.Point(184, 255);
+            this.ButtonEnter.Name = "ButtonEnter";
+            this.ButtonEnter.Size = new System.Drawing.Size(75, 23);
+            this.ButtonEnter.TabIndex = 6;
+            this.ButtonEnter.Text = "Enter";
+            this.ButtonEnter.UseVisualStyleBackColor = true;
+            this.ButtonEnter.Click += new System.EventHandler(this.ButtonEnter_Click);
             // 
             // frmCode
             // 
@@ -95,7 +95,7 @@
             this.Controls.Add(this.LabelTitle);
             this.Controls.Add(this.LabelDesc);
             this.Controls.Add(this.TextBox1);
-            this.Controls.Add(this.Button2);
+            this.Controls.Add(this.ButtonEnter);
             this.Name = "frmCode";
             this.Text = "frmCode";
             this.Load += new System.EventHandler(this.frmCode_Load);
@@ -110,6 +110,6 @@
         internal System.Windows.Forms.Label LabelTitle;
         internal System.Windows.Forms.Label LabelDesc;
         internal System.Windows.Forms.TextBox TextBox1;
-        internal System.Windows.Forms.Button Button2;
+        internal System.Windows.Forms.Button ButtonEnter;
     }
 }

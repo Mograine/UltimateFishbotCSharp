@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UltimateFishBot.Classes;
@@ -75,8 +76,8 @@ namespace UltimateFishBot.Forms
             LabelSplashThreshold.Text       = Translate.GetTranslate("frmSettings", "LABEL_SPLASH_THRESHOLD");
             LabelSplashThresholdDesc.Text   = Translate.GetTranslate("frmSettings", "LABEL_SPLASH_THRESHOLD_DESC");
 
-            LabelAudioDevice.Text           = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_DELAY");
-            LabelAudioDeviceDesc.Text       = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_DELAY_DESC");
+            LabelAudioDevice.Text           = Translate.GetTranslate("frmSettings", "LABEL_AUDIO_DEVICE");
+            LabelAudioDeviceDesc.Text       = Translate.GetTranslate("frmSettings", "LABEL_AUDIO_DEVICE_DESC");
 
             /// Premium Settings
 
@@ -92,6 +93,8 @@ namespace UltimateFishBot.Forms
             LabelBaitKey5.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_5");
             LabelBaitKey6.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_6");
             LabelBaitKey7.Text              = Translate.GetTranslate("frmSettings", "LABEL_BAIT_KEY_7");
+
+            LabelCustomizeDesc.Text         = Translate.GetTranslate("frmSettings", "LABEL_CUSTOMIZE_DESC");
 
             cbAlt.Text                      = Translate.GetTranslate("frmSettings", "CB_ALT_KEY");
             cbAutoLure.Text                 = Translate.GetTranslate("frmSettings", "CB_AUTO_LURE");
@@ -221,6 +224,7 @@ namespace UltimateFishBot.Forms
                 MessageBox.Show(Translate.GetTranslate("frmSettings", "LABEL_LANGUAGE_CHANGE"),
                                 Translate.GetTranslate("frmSettings", "TITLE_LANGUAGE_CHANGE"));
 
+                Thread.Sleep(1000);
                 Application.Restart();
             }
             else
