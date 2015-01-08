@@ -14,23 +14,20 @@
     <frmDirections>
         <TITLE>Comment l'Utiliser</TITLE>
         <LABEL_SETTING_WOW_TITLE>1.) Configurer WoW</LABEL_SETTING_WOW_TITLE>
-        <LABEL_SETTING_WOW_DESC>
-          * Equipez votre canne à pêche
+        <LABEL_SETTING_WOW_DESC>* Equipez votre canne à pêche
           * Placez la compétence pêche dans le slot n°1 de votre barre d'action
-          * Augmentez le volume principal à 100%. Son à 100%, Musique à 0%, Ambiance à 0%, Discussion à 0%.
+          * Augmentez le volume principal à 100%.
+          * Son à 100%, Musique à 0%, Ambiance à 0%, Discussion à 0%.
           * Mettez WoW en mode fenêtré et rétrécissez l'écran autant que possible.
         </LABEL_SETTING_WOW_DESC>
         <LABEL_FIND_LOCATION_TITLE>2.) Trouver un Emplacement</LABEL_FIND_LOCATION_TITLE>
-        <LABEL_FIND_LOCATION_DESC>
-            * Allez près d'un point d'eau.
+        <LABEL_FIND_LOCATION_DESC>* Allez près d'un point d'eau.
             * Zoomez le plus possible.
             * Choisissez un emplacement avec le moins de bruit possible.
             * Evitez les emplacements avec quoi que ce soit changeant l'icone de la souris.
         </LABEL_FIND_LOCATION_DESC>
         <LABEL_FISH_TITLE>3.) Pêchez !</LABEL_FISH_TITLE>
-        <LABEL_FISH_DESC>
-            * Appuyez sur "Démarrer", asseyez-vous, et laissez le bot prendre les choses en main !
-        </LABEL_FISH_DESC>
+        <LABEL_FISH_DESC>* Appuyez sur "Démarrer", asseyez-vous, et laissez le bot prendre les choses en main !</LABEL_FISH_DESC>
     </frmDirections>
     <frmMain>
         <BUTTON_START>Démarrer</BUTTON_START>
@@ -88,7 +85,7 @@
         <LABEL_SCANNING_DELAY_DESC>Le nombre de millisecondes à attendre avent de vérifier si le curseur a changé. Trop peu et vous risquez de ne pas détecter le flotteur; mais plus élevé le scan sera plus lent</LABEL_SCANNING_DELAY_DESC>
 
         <LABEL_SCANNING_RETRIES>Tentatives de Scan :</LABEL_SCANNING_RETRIES>
-        <LABEL_SCANNING_RETRIES_DESC>Combien de fois le bot va effectuer une recherche complète.</LABEL_SCANNING_RETRIES_DESC>
+        <LABEL_SCANNING_RETRIES_DESC>Nombre de fois que le bot va effectuer une recherche complète.</LABEL_SCANNING_RETRIES_DESC>
 
         <LABEL_CHECK_ICON>Vérifier l'icone du Curseur</LABEL_CHECK_ICON>
         <LABEL_CHECK_ICON_DESC>Détermine si le bot doit vérifier l'icone avant de pecher. Permet d'éviter de cliquer autre part que sur le flotteur. Si votre flotteur n'est pas trouvé, essayer de désactiver cette option.</LABEL_CHECK_ICON_DESC>

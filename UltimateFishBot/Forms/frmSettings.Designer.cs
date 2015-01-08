@@ -902,7 +902,7 @@
             // labelLanguageDesc
             // 
             this.labelLanguageDesc.AutoSize = true;
-            this.labelLanguageDesc.Location = new System.Drawing.Point(127, 157);
+            this.labelLanguageDesc.Location = new System.Drawing.Point(86, 157);
             this.labelLanguageDesc.Name = "labelLanguageDesc";
             this.labelLanguageDesc.Size = new System.Drawing.Size(271, 26);
             this.labelLanguageDesc.TabIndex = 16;
