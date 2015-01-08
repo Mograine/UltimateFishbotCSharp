@@ -15,12 +15,13 @@ namespace UltimateFishBot.Classes
         public enum FishingState
         {
             Idle                = 0,
-            Casting             = 1,
-            SearchingForBobber  = 2,
-            WaitingForFish      = 3,
-            Looting             = 4,
-            Paused              = 5,
-            Stopped             = 6
+            Start               = 1,
+            Casting             = 2,
+            SearchingForBobber  = 3,
+            WaitingForFish      = 4,
+            Looting             = 5,
+            Paused              = 6,
+            Stopped             = 7
         }
 
         public enum NeededAction
@@ -111,12 +112,12 @@ namespace UltimateFishBot.Classes
             if (Properties.Settings.Default.AutoBait)
                 AddNeededAction(NeededAction.Bait);
 
-            SetActualState(FishingState.Idle);
+            SetActualState(FishingState.Start);
         }
 
         public void Resume()
         {
-            SetActualState(FishingState.Idle);
+            SetActualState(FishingState.Start);
         }
 
         public void Stop()
@@ -132,6 +133,10 @@ namespace UltimateFishBot.Classes
 
         public void SetActualState(FishingState state)
         {
+            if (m_actualState == FishingState.Stopped || m_actualState == FishingState.Paused)
+                if (state != FishingState.Start)
+                    return;
+
             m_actualState = state;
         }
 
@@ -207,6 +212,12 @@ namespace UltimateFishBot.Classes
         {
             switch (GetActualState())
             {
+                case FishingState.Start:
+                {
+                    // We just start, going to Idle to begin bot loop
+                    SetActualState(FishingState.Idle);
+                    break;
+                }
                 case FishingState.Idle:
                 {
                     // We first check if another action is needed, foreach on all NeededAction enum values
