@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using UltimateFishBot.Classes.Helpers;
 
 namespace UltimateFishBot.Classes.BodyParts
@@ -85,14 +81,40 @@ namespace UltimateFishBot.Classes.BodyParts
                             actualCursor.hCursor == noFishCursor.hCursor)
                             continue;
 
-                        // We found a fish !
+                        // Compare the actual icon with our fishIcon if user want it
+                        if (Properties.Settings.Default.CheckCursor)
+                            if (!ImageCompare(Win32.GetCursorIcon(actualCursor), Properties.Resources.fishIcon35x35))
+                                continue;
 
+                        // We found a fish !
                         return;
                     }
                 }
             }
 
             throw new Exception("Fish not found"); // Will be catch in Manager:EyeProcess_RunWorkerCompleted
+        }
+
+        private bool ImageCompare(Bitmap firstImage, Bitmap secondImage)
+        {
+            if (firstImage.Width != secondImage.Width || firstImage.Height != secondImage.Height)
+                return false;
+
+            string firstPixel = "";
+            string secondPixel = "";
+
+            for (int i = 0; i < firstImage.Width; i++)
+            {
+                for (int j = 0; j < firstImage.Height; j++)
+                {
+                    firstPixel = firstImage.GetPixel(i, j).ToString();
+                    secondPixel = secondImage.GetPixel(i, j).ToString();
+                    if (firstPixel != secondPixel)
+                        return false;
+                }
+            }
+
+            return true;
         }
     }
 }

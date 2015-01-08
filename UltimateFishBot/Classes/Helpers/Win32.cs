@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UltimateFishBot.Classes.Helpers
@@ -54,16 +51,19 @@ namespace UltimateFishBot.Classes.Helpers
         private static extern bool GetWindowRect(IntPtr hwnd, ref Rect rectangle);
 
         [DllImport("user32.dll")]
-        static extern bool SetCursorPos(int X, int Y);
+        private static extern bool SetCursorPos(int X, int Y);
 
         [DllImport("user32.dll")]
-        static extern bool GetCursorInfo(out CursorInfo pci);
+        private static extern bool GetCursorInfo(out CursorInfo pci);
 
         [DllImport("user32.dll")]
-        static extern bool keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
+        private static extern bool DrawIcon(IntPtr hDC, int X, int Y, IntPtr hIcon);
+
+        [DllImport("user32.dll")]
+        private static extern bool keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
 
         [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        static extern bool SendNotifyMessage(IntPtr hWnd, uint Msg, UIntPtr wParam, IntPtr lParam);
+        private  static extern bool SendNotifyMessage(IntPtr hWnd, uint Msg, UIntPtr wParam, IntPtr lParam);
 
         private const uint WM_LBUTTONDOWN    = 513;
         private const uint WM_LBUTTONUP      = 514;
@@ -82,6 +82,22 @@ namespace UltimateFishBot.Classes.Helpers
             myRect.Width = (Win32ApiRect.Right - Win32ApiRect.Left);
             myRect.Height = (Win32ApiRect.Bottom - Win32ApiRect.Top);
             return myRect;
+        }
+
+        public static Bitmap GetCursorIcon(CursorInfo actualCursor, int width = 35, int height = 35)
+        {
+            Bitmap actualCursorIcon = null;
+
+            try
+            {
+                actualCursorIcon = new Bitmap(width, height);
+                Graphics g = Graphics.FromImage(actualCursorIcon);
+                Win32.DrawIcon(g.GetHdc(), 0, 0, actualCursor.hCursor);
+                g.ReleaseHdc();
+            }
+            catch (Exception) { }
+
+            return actualCursorIcon;
         }
 
         static public void ActivateWow()

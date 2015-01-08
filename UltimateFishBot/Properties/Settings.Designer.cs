@@ -442,5 +442,17 @@ namespace UltimateFishBot.Properties {
                 this["Language"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool CheckCursor {
+            get {
+                return ((bool)(this["CheckCursor"]));
+            }
+            set {
+                this["CheckCursor"] = value;
+            }
+        }
     }
 }

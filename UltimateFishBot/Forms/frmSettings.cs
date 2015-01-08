@@ -71,6 +71,9 @@ namespace UltimateFishBot.Forms
             LabelScanningRetries.Text       = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_RETRIES");
             LabelScanningRetriesDesc.Text   = Translate.GetTranslate("frmSettings", "LABEL_SCANNING_RETRIES_DESC");
 
+            cmbCompareIcon.Text             = Translate.GetTranslate("frmSettings", "LABEL_CHECK_ICON");
+            LabelCheckCursorIcon.Text       = Translate.GetTranslate("frmSettings", "LABEL_CHECK_ICON_DESC");
+
             /// Hearing the Fish
 
             LabelSplashThreshold.Text       = Translate.GetTranslate("frmSettings", "LABEL_SPLASH_THRESHOLD");
@@ -126,6 +129,7 @@ namespace UltimateFishBot.Forms
             txtDelay.Text           = Properties.Settings.Default.ScanningDelay.ToString();
             txtRetries.Text         = Properties.Settings.Default.ScanningRetries.ToString();
             txtScanSteps.Text       = Properties.Settings.Default.ScanningSteps.ToString();
+            cmbCompareIcon.Checked  = Properties.Settings.Default.CheckCursor;
 
             /// Hearing the Fish
             txtSplash.Text          = Properties.Settings.Default.SplashLimit.ToString();
@@ -180,6 +184,7 @@ namespace UltimateFishBot.Forms
             Properties.Settings.Default.ScanningDelay   = int.Parse(txtDelay.Text);
             Properties.Settings.Default.ScanningRetries = int.Parse(txtRetries.Text);
             Properties.Settings.Default.ScanningSteps   = int.Parse(txtScanSteps.Text);
+            Properties.Settings.Default.CheckCursor     = cmbCompareIcon.Checked;
             
             /// Hearing the Fish
             Properties.Settings.Default.SplashLimit     = int.Parse(txtSplash.Text);

@@ -104,6 +104,8 @@
             this.labelLanguageDesc = new System.Windows.Forms.Label();
             this.labelLanguage = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cmbCompareIcon = new System.Windows.Forms.CheckBox();
+            this.LabelCheckCursorIcon = new System.Windows.Forms.Label();
             this.TabPage3.SuspendLayout();
             this.TabPage4.SuspendLayout();
             this.tabSettings.SuspendLayout();
@@ -115,9 +117,9 @@
             // LabelScanningDelayDesc
             // 
             this.LabelScanningDelayDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelScanningDelayDesc.Location = new System.Drawing.Point(8, 112);
+            this.LabelScanningDelayDesc.Location = new System.Drawing.Point(8, 102);
             this.LabelScanningDelayDesc.Name = "LabelScanningDelayDesc";
-            this.LabelScanningDelayDesc.Size = new System.Drawing.Size(423, 59);
+            this.LabelScanningDelayDesc.Size = new System.Drawing.Size(423, 51);
             this.LabelScanningDelayDesc.TabIndex = 13;
             this.LabelScanningDelayDesc.Text = "The number of milliseconds to wait before checking if the cursor has changed.  To" +
     " slow and you might not detect the bobber; but a bigger number goes slower.";
@@ -135,7 +137,7 @@
             this.LabelScanningStepsDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelScanningStepsDesc.Location = new System.Drawing.Point(6, 32);
             this.LabelScanningStepsDesc.Name = "LabelScanningStepsDesc";
-            this.LabelScanningStepsDesc.Size = new System.Drawing.Size(423, 54);
+            this.LabelScanningStepsDesc.Size = new System.Drawing.Size(423, 42);
             this.LabelScanningStepsDesc.TabIndex = 10;
             this.LabelScanningStepsDesc.Text = "The greater number of steps, the less likely you are to miss the cursor; but the " +
     "slower your scan will be.";
@@ -650,7 +652,7 @@
             // 
             this.LabelScanningDelay.AutoSize = true;
             this.LabelScanningDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelScanningDelay.Location = new System.Drawing.Point(2, 92);
+            this.LabelScanningDelay.Location = new System.Drawing.Point(2, 82);
             this.LabelScanningDelay.Name = "LabelScanningDelay";
             this.LabelScanningDelay.Size = new System.Drawing.Size(100, 13);
             this.LabelScanningDelay.TabIndex = 12;
@@ -674,7 +676,7 @@
             // txtDelay
             // 
             this.txtDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDelay.Location = new System.Drawing.Point(128, 89);
+            this.txtDelay.Location = new System.Drawing.Point(128, 79);
             this.txtDelay.Name = "txtDelay";
             this.txtDelay.Size = new System.Drawing.Size(32, 20);
             this.txtDelay.TabIndex = 14;
@@ -798,6 +800,8 @@
             // 
             // TabPage1
             // 
+            this.TabPage1.Controls.Add(this.LabelCheckCursorIcon);
+            this.TabPage1.Controls.Add(this.cmbCompareIcon);
             this.TabPage1.Controls.Add(this.txtRetries);
             this.TabPage1.Controls.Add(this.LabelScanningRetriesDesc);
             this.TabPage1.Controls.Add(this.LabelScanningRetries);
@@ -818,7 +822,7 @@
             // txtRetries
             // 
             this.txtRetries.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRetries.Location = new System.Drawing.Point(129, 174);
+            this.txtRetries.Location = new System.Drawing.Point(129, 154);
             this.txtRetries.Name = "txtRetries";
             this.txtRetries.Size = new System.Drawing.Size(32, 20);
             this.txtRetries.TabIndex = 17;
@@ -826,9 +830,9 @@
             // LabelScanningRetriesDesc
             // 
             this.LabelScanningRetriesDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelScanningRetriesDesc.Location = new System.Drawing.Point(6, 197);
+            this.LabelScanningRetriesDesc.Location = new System.Drawing.Point(6, 177);
             this.LabelScanningRetriesDesc.Name = "LabelScanningRetriesDesc";
-            this.LabelScanningRetriesDesc.Size = new System.Drawing.Size(423, 59);
+            this.LabelScanningRetriesDesc.Size = new System.Drawing.Size(423, 38);
             this.LabelScanningRetriesDesc.TabIndex = 16;
             this.LabelScanningRetriesDesc.Text = "How many times to run the search pattern.";
             // 
@@ -836,7 +840,7 @@
             // 
             this.LabelScanningRetries.AutoSize = true;
             this.LabelScanningRetries.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelScanningRetries.Location = new System.Drawing.Point(3, 177);
+            this.LabelScanningRetries.Location = new System.Drawing.Point(3, 157);
             this.LabelScanningRetries.Name = "LabelScanningRetries";
             this.LabelScanningRetries.Size = new System.Drawing.Size(108, 13);
             this.LabelScanningRetries.TabIndex = 15;
@@ -895,6 +899,27 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // cmbCompareIcon
+            // 
+            this.cmbCompareIcon.AutoSize = true;
+            this.cmbCompareIcon.Location = new System.Drawing.Point(5, 228);
+            this.cmbCompareIcon.Name = "cmbCompareIcon";
+            this.cmbCompareIcon.Size = new System.Drawing.Size(114, 17);
+            this.cmbCompareIcon.TabIndex = 18;
+            this.cmbCompareIcon.Text = "Check Cursor Icon";
+            this.cmbCompareIcon.UseVisualStyleBackColor = true;
+            // 
+            // LabelCheckCursorIcon
+            // 
+            this.LabelCheckCursorIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCheckCursorIcon.Location = new System.Drawing.Point(3, 248);
+            this.LabelCheckCursorIcon.Name = "LabelCheckCursorIcon";
+            this.LabelCheckCursorIcon.Size = new System.Drawing.Size(423, 58);
+            this.LabelCheckCursorIcon.TabIndex = 19;
+            this.LabelCheckCursorIcon.Text = "Specify if the bot must check the icon before fishing. Avoid clicking when it\'s n" +
+    "ot a bobber. May not work on some computer, disable if the bot don\'t find your b" +
+    "obber.";
             // 
             // frmSettings
             // 
@@ -998,6 +1023,8 @@
         private System.Windows.Forms.Label labelLanguage;
         private System.Windows.Forms.Label labelLanguageDesc;
         internal System.Windows.Forms.ComboBox cmbLanguage;
+        internal System.Windows.Forms.Label LabelCheckCursorIcon;
+        internal System.Windows.Forms.CheckBox cmbCompareIcon;
 
     }
 }

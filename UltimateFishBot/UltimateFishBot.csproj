@@ -101,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\CoreAudioApi.dll" />
+    <None Include="Resources\fishIcon35x35.bmp" />
     <Content Include="Resources\Français.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
