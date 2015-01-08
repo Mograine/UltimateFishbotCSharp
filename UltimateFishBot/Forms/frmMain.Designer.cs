@@ -130,6 +130,7 @@
             this.Name = "frmMain";
             this.Text = "UltimateFishBot - v 4.0";
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 

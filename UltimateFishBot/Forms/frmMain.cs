@@ -8,12 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UltimateFishBot.Classes;
+using UltimateFishBot.Classes.Helpers;
 using UltimateFishBot.Forms;
 
 namespace UltimateFishBot
 {
     public partial class frmMain : Form
     {
+        enum KeyModifier
+        {
+            None    = 0,
+            Alt     = 1,
+            Control = 2,
+            Shift   = 4,
+            WinKey  = 8
+        }
+
+        enum HotKey
+        {
+            StartStop   = 0
+        }
+
         public frmMain()
         {
             InitializeComponent();
@@ -29,6 +44,8 @@ namespace UltimateFishBot
             btnHowTo.Text       = Translate.GetTranslate("frmMain", "BUTTON_HTU");
             btnClose.Text       = Translate.GetTranslate("frmMain", "BUTTON_EXIT");
             lblStatus.Text      = Translate.GetTranslate("frmMain", "LABEL_STOPPED");
+
+            Win32.RegisterHotKey(this.Handle, (int)HotKey.StartStop, (int)KeyModifier.Shift + (int)KeyModifier.Control, Keys.S.GetHashCode());
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -74,17 +91,10 @@ namespace UltimateFishBot
             }
         }
 
-        public void StopFishing()
-        {
-            btnStop_Click(null, null);
-        }
-
         private void btnSettings_Click(object sender, EventArgs e)
         {
             new frmSettings().Show();
         }
-
-        private Manager m_manager;
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -95,5 +105,41 @@ namespace UltimateFishBot
         {
             new frmDirections().Show();
         }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Unregister all hotkeys before closing the form.
+            foreach (HotKey hotKey in (HotKey[])Enum.GetValues(typeof(HotKey)))
+                Win32.UnregisterHotKey(this.Handle, (int)hotKey);
+        }
+
+        public void StopFishing()
+        {
+            btnStop_Click(null, null);
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+
+            if (m.Msg == WM_HOTKEY)
+            {
+                Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);                  // The key of the hotkey that was pressed.
+                KeyModifier modifier = (KeyModifier)((int)m.LParam & 0xFFFF);       // The modifier of the hotkey that was pressed.
+                int id = m.WParam.ToInt32();                                        // The id of the hotkey that was pressed.
+
+                if (id == (int)HotKey.StartStop)
+                {
+                    if (m_manager.GetActualState() == Manager.FishingState.Paused ||
+                        m_manager.GetActualState() == Manager.FishingState.Stopped)
+                        btnStart_Click(null, null);
+                    else
+                        btnStop_Click(null, null);
+                }
+            }
+        }
+
+        private Manager m_manager;
+        private static int WM_HOTKEY = 0x0312;
     }
 }
