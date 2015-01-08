@@ -100,10 +100,10 @@
             this.LabelScanningRetriesDesc = new System.Windows.Forms.Label();
             this.LabelScanningRetries = new System.Windows.Forms.Label();
             this.TabPage5 = new System.Windows.Forms.TabPage();
+            this.cmbLanguage = new System.Windows.Forms.ComboBox();
+            this.labelLanguageDesc = new System.Windows.Forms.Label();
             this.labelLanguage = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.labelLanguageDesc = new System.Windows.Forms.Label();
-            this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.TabPage3.SuspendLayout();
             this.TabPage4.SuspendLayout();
             this.tabSettings.SuspendLayout();
@@ -125,7 +125,7 @@
             // txtScanSteps
             // 
             this.txtScanSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScanSteps.Location = new System.Drawing.Point(112, 7);
+            this.txtScanSteps.Location = new System.Drawing.Point(129, 9);
             this.txtScanSteps.Name = "txtScanSteps";
             this.txtScanSteps.Size = new System.Drawing.Size(32, 20);
             this.txtScanSteps.TabIndex = 11;
@@ -170,7 +170,7 @@
             // lblAudioLevel
             // 
             this.lblAudioLevel.AutoSize = true;
-            this.lblAudioLevel.Location = new System.Drawing.Point(421, 76);
+            this.lblAudioLevel.Location = new System.Drawing.Point(466, 76);
             this.lblAudioLevel.Name = "lblAudioLevel";
             this.lblAudioLevel.Size = new System.Drawing.Size(13, 13);
             this.lblAudioLevel.TabIndex = 19;
@@ -178,7 +178,7 @@
             // 
             // pgbSoundLevel
             // 
-            this.pgbSoundLevel.Location = new System.Drawing.Point(219, 73);
+            this.pgbSoundLevel.Location = new System.Drawing.Point(278, 73);
             this.pgbSoundLevel.Name = "pgbSoundLevel";
             this.pgbSoundLevel.Size = new System.Drawing.Size(182, 21);
             this.pgbSoundLevel.TabIndex = 18;
@@ -200,7 +200,7 @@
             this.cmbAudio.FormattingEnabled = true;
             this.cmbAudio.Items.AddRange(new object[] {
             "Default"});
-            this.cmbAudio.Location = new System.Drawing.Point(102, 73);
+            this.cmbAudio.Location = new System.Drawing.Point(173, 73);
             this.cmbAudio.Name = "cmbAudio";
             this.cmbAudio.Size = new System.Drawing.Size(99, 21);
             this.cmbAudio.TabIndex = 16;
@@ -219,7 +219,7 @@
             // txtSplash
             // 
             this.txtSplash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSplash.Location = new System.Drawing.Point(117, 6);
+            this.txtSplash.Location = new System.Drawing.Point(173, 8);
             this.txtSplash.Name = "txtSplash";
             this.txtSplash.Size = new System.Drawing.Size(32, 20);
             this.txtSplash.TabIndex = 14;
@@ -674,7 +674,7 @@
             // txtDelay
             // 
             this.txtDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDelay.Location = new System.Drawing.Point(112, 70);
+            this.txtDelay.Location = new System.Drawing.Point(129, 72);
             this.txtDelay.Name = "txtDelay";
             this.txtDelay.Size = new System.Drawing.Size(32, 20);
             this.txtDelay.TabIndex = 14;
@@ -716,7 +716,7 @@
             // txtFishWait
             // 
             this.txtFishWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFishWait.Location = new System.Drawing.Point(131, 77);
+            this.txtFishWait.Location = new System.Drawing.Point(153, 77);
             this.txtFishWait.Name = "txtFishWait";
             this.txtFishWait.Size = new System.Drawing.Size(53, 20);
             this.txtFishWait.TabIndex = 20;
@@ -744,7 +744,7 @@
             // txtLootingDelay
             // 
             this.txtLootingDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLootingDelay.Location = new System.Drawing.Point(131, 141);
+            this.txtLootingDelay.Location = new System.Drawing.Point(153, 141);
             this.txtLootingDelay.Name = "txtLootingDelay";
             this.txtLootingDelay.Size = new System.Drawing.Size(53, 20);
             this.txtLootingDelay.TabIndex = 17;
@@ -771,7 +771,7 @@
             // txtCastDelay
             // 
             this.txtCastDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCastDelay.Location = new System.Drawing.Point(131, 12);
+            this.txtCastDelay.Location = new System.Drawing.Point(153, 12);
             this.txtCastDelay.Name = "txtCastDelay";
             this.txtCastDelay.Size = new System.Drawing.Size(53, 20);
             this.txtCastDelay.TabIndex = 14;
@@ -818,7 +818,7 @@
             // txtRetries
             // 
             this.txtRetries.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRetries.Location = new System.Drawing.Point(112, 131);
+            this.txtRetries.Location = new System.Drawing.Point(129, 133);
             this.txtRetries.Name = "txtRetries";
             this.txtRetries.Size = new System.Drawing.Size(32, 20);
             this.txtRetries.TabIndex = 17;
@@ -855,25 +855,16 @@
             this.TabPage5.Text = "Language";
             this.TabPage5.UseVisualStyleBackColor = true;
             // 
-            // labelLanguage
+            // cmbLanguage
             // 
-            this.labelLanguage.AutoSize = true;
-            this.labelLanguage.Location = new System.Drawing.Point(114, 137);
-            this.labelLanguage.Name = "labelLanguage";
-            this.labelLanguage.Size = new System.Drawing.Size(131, 13);
-            this.labelLanguage.TabIndex = 0;
-            this.labelLanguage.Text = "Language XML File name:";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(255, 341);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(92, 23);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLanguage.FormattingEnabled = true;
+            this.cmbLanguage.Items.AddRange(new object[] {
+            "Default"});
+            this.cmbLanguage.Location = new System.Drawing.Point(181, 133);
+            this.cmbLanguage.Name = "cmbLanguage";
+            this.cmbLanguage.Size = new System.Drawing.Size(99, 21);
+            this.cmbLanguage.TabIndex = 17;
             // 
             // labelLanguageDesc
             // 
@@ -885,16 +876,25 @@
             this.labelLanguageDesc.Text = "Select the language file that you want to use.\r\nLanguage XML Files must be found " +
     "in Resources folder.";
             // 
-            // cmbLanguage
+            // labelLanguage
             // 
-            this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLanguage.FormattingEnabled = true;
-            this.cmbLanguage.Items.AddRange(new object[] {
-            "Default"});
-            this.cmbLanguage.Location = new System.Drawing.Point(251, 134);
-            this.cmbLanguage.Name = "cmbLanguage";
-            this.cmbLanguage.Size = new System.Drawing.Size(99, 21);
-            this.cmbLanguage.TabIndex = 17;
+            this.labelLanguage.AutoSize = true;
+            this.labelLanguage.Location = new System.Drawing.Point(114, 137);
+            this.labelLanguage.Name = "labelLanguage";
+            this.labelLanguage.Size = new System.Drawing.Size(61, 13);
+            this.labelLanguage.TabIndex = 0;
+            this.labelLanguage.Text = "Language :";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(255, 341);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(92, 23);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmSettings
             // 

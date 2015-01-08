@@ -1,95 +1,100 @@
 <translation>
     <frmCode>
-        <TITLE>Thanks for using the UltimateFishBot</TITLE>
-        <LIBELLE_TITLE>Relax... It's still free !</LIBELLE_TITLE>
-        <LIBELLE_DESC>You've used the Ultimate Fishbot {0} times. To continue using it; you need to visit the Fishbot website and enter the 3-5 digit code in the box below.  If a browser window didn't open, you can find it at www.fishbot.net/code.html - or click the link below.  I promise, it's quick and painless.</LIBELLE_DESC>
-        <LIBELLE_TRY_AGAIN>Try again!</LIBELLE_TRY_AGAIN>
+        <TITLE>Merci d'utiliser l'UltimateFishBot</TITLE>
+        <LIBELLE_TITLE>Relax... C'est toujours gratuit !</LIBELLE_TITLE>
+        <LIBELLE_DESC>
+          Vous avez utilisé UltimateFishBot {0} fois.
+          Pour continuer à l'utiliser, vous devez visiter le site Fishbot et renseigner les 3 chiffres.
+          Si votre navigateur internet ne s'est pas ouvert, cliquez simplement sur le lien ci-dessous.
+          Ne vous inquietez pas, c'est est très rapide et sans douleur.
+        </LIBELLE_DESC>
+        <LIBELLE_TRY_AGAIN>Essaye encore !</LIBELLE_TRY_AGAIN>
     </frmCode>
     <frmDirections>
-        <TITLE>How to Use</TITLE>
-        <LABEL_SETTING_WOW_TITLE>1.)  Setting Up WoW</LABEL_SETTING_WOW_TITLE>
+        <TITLE>Comment l'Utiliser</TITLE>
+        <LABEL_SETTING_WOW_TITLE>1.) Configurer WoW</LABEL_SETTING_WOW_TITLE>
         <LABEL_SETTING_WOW_DESC>
-            * Equip your Fishing Pole
-            * Place Fishing in the #1 Slot on your action bar
-            * Set the Master Volume to 100%.  Sound to High, Music to Low, Ambience to Low
-            * Put WoW into Windowed mode and shrink the screen as much as possible
+          * Equipez votre canne à pêche
+          * Placez la compétence pêche dans le slot n°1 de votre barre d'action
+          * Augmentez le volume principal à 100%. Son à 100%, Musique à 0%, Ambiance à 0%, Discussion à 0%.
+          * Mettez WoW en mode fenêtré et rétrécissez l'écran autant que possible.
         </LABEL_SETTING_WOW_DESC>
-        <LABEL_FIND_LOCATION_TITLE>2.)  Find a Location</LABEL_FIND_LOCATION_TITLE>
+        <LABEL_FIND_LOCATION_TITLE>2.) Trouver un Emplacement</LABEL_FIND_LOCATION_TITLE>
         <LABEL_FIND_LOCATION_DESC>
-            * Walk to some lake/water
-            * Zoom in as much as possible
-            * Find a location with as little sound as possible
-            * Avoid locations with anything that changes the mouse icon
+            * Allez près d'un point d'eau.
+            * Zoomez le plus possible.
+            * Choisissez un emplacement avec le moins de bruit possible.
+            * Evitez les emplacements avec quoi que ce soit changeant l'icone de la souris.
         </LABEL_FIND_LOCATION_DESC>
-        <LABEL_FISH_TITLE>3.)  Fish!</LABEL_FISH_TITLE>
+        <LABEL_FISH_TITLE>3.) Pêchez !</LABEL_FISH_TITLE>
         <LABEL_FISH_DESC>
-            * Press Start, sit back, and let The Gorton's Fisherman handle things.
+            * Appuyez sur "Démarrer", asseyez-vous, et laissez le bot prendre les choses en main !
         </LABEL_FISH_DESC>
     </frmDirections>
     <frmMain>
-        <BUTTON_START>Start</BUTTON_START>
-        <BUTTON_RESUME>Resume</BUTTON_RESUME>
+        <BUTTON_START>Démarrer</BUTTON_START>
+        <BUTTON_RESUME>Reprendre</BUTTON_RESUME>
         <BUTTON_STOP>Stop</BUTTON_STOP>
         <BUTTON_PAUSE>Pause</BUTTON_PAUSE>
-        <BUTTON_SETTINGS>Settings</BUTTON_SETTINGS>
-        <BUTTON_HTU>How to Use</BUTTON_HTU>
-        <BUTTON_EXIT>Exit</BUTTON_EXIT>
+        <BUTTON_SETTINGS>Paramètres</BUTTON_SETTINGS>
+        <BUTTON_HTU>Mode d'Emploi</BUTTON_HTU>
+        <BUTTON_EXIT>Quitter</BUTTON_EXIT>
 
-        <LABEL_STARTED>Started</LABEL_STARTED>
-        <LABEL_RESUMED>Resumed</LABEL_RESUMED>
-        <LABEL_PAUSED>Paused</LABEL_PAUSED>
-        <LABEL_STOPPED>Stopped</LABEL_STOPPED>
+        <LABEL_STARTED>Démarré</LABEL_STARTED>
+        <LABEL_RESUMED>Repris</LABEL_RESUMED>
+        <LABEL_PAUSED>En Pause</LABEL_PAUSED>
+        <LABEL_STOPPED>Arreté</LABEL_STOPPED>
     </frmMain>
     <manager>
-        <LABEL_HEAR_FISH>I Hear a Fish !</LABEL_HEAR_FISH>
+        <LABEL_HEAR_FISH>Poisson Entendu !</LABEL_HEAR_FISH>
         <LABEL_CASTING>Casting...</LABEL_CASTING>
-        <LABEL_START_FINDING>Start Finding Bobber...</LABEL_START_FINDING>
-        <LABEL_FINDING>Finding Bobber...</LABEL_FINDING>
-        <LABEL_WAITING>Waiting for Fish ({0}/{1}s) ...</LABEL_WAITING>
+        <LABEL_START_FINDING>Début recherche Flotteur...</LABEL_START_FINDING>
+        <LABEL_FINDING>Recherche Flotteur...</LABEL_FINDING>
+        <LABEL_WAITING>En attente du Poisson ({0}/{1}s) ...</LABEL_WAITING>
 
-        <LABEL_HEARTHSTONE>Done Fishing - Hearthing...</LABEL_HEARTHSTONE>
-        <LABEL_APPLY_LURE>Applying Lure...</LABEL_APPLY_LURE>
-        <LABEL_APPLY_CHARM> Applying Charm...</LABEL_APPLY_CHARM>
-        <LABEL_APPLY_RAFT>Applying Raft...</LABEL_APPLY_RAFT>
-        <LABEL_APPLY_BAIT>Applying Bait {0}...</LABEL_APPLY_BAIT>
+        <LABEL_HEARTHSTONE>Pêche terminée - PDF...</LABEL_HEARTHSTONE>
+        <LABEL_APPLY_LURE>Application leurre...</LABEL_APPLY_LURE>
+        <LABEL_APPLY_CHARM>Application charme...</LABEL_APPLY_CHARM>
+        <LABEL_APPLY_RAFT>Application radeau...</LABEL_APPLY_RAFT>
+        <LABEL_APPLY_BAIT>Application appât {0}...</LABEL_APPLY_BAIT>
     </manager>
     <frmSettings>
-        <TITLE>Settings</TITLE>
+        <TITLE>Paramètres</TITLE>
 
         <!-- Tabs Titles -->
-        <TAB_TITLE_GENERAL_FISHING>General Fishing</TAB_TITLE_GENERAL_FISHING>
-        <TAB_TITLE_FIND_CURSOR>Finding the Cursor</TAB_TITLE_FIND_CURSOR>
-        <TAB_TITLE_HEARING_FISH>Hearing the Fish</TAB_TITLE_HEARING_FISH>
-        <TAB_TITLE_PREMIUM>Premium Settings</TAB_TITLE_PREMIUM>
-        <TAB_TITLE_LANGUAGE>Language</TAB_TITLE_LANGUAGE>
+        <TAB_TITLE_GENERAL_FISHING>Général</TAB_TITLE_GENERAL_FISHING>
+        <TAB_TITLE_FIND_CURSOR>Recherche du Curseur</TAB_TITLE_FIND_CURSOR>
+        <TAB_TITLE_HEARING_FISH>Audio</TAB_TITLE_HEARING_FISH>
+        <TAB_TITLE_PREMIUM>Paramètres Premium</TAB_TITLE_PREMIUM>
+        <TAB_TITLE_LANGUAGE>Langue</TAB_TITLE_LANGUAGE>
 
         <!-- General Fishing -->
-        <LABEL_DELAY_AFTER_CAST>Delay After Cast:</LABEL_DELAY_AFTER_CAST>
+        <LABEL_DELAY_AFTER_CAST>Delai après Cast :</LABEL_DELAY_AFTER_CAST>
         <LABEL_DELAY_AFTER_CAST_DESC>The number of milliseconds to wait after the cast before searching. Too short and you'll skip the bobber, too long and you'll waste time.</LABEL_DELAY_AFTER_CAST_DESC>
 
-        <LABEL_FISH_WAIT_LIMIT>Fish Wait Limit:</LABEL_FISH_WAIT_LIMIT>
+        <LABEL_FISH_WAIT_LIMIT>Attente poisson max:</LABEL_FISH_WAIT_LIMIT>
         <LABEL_FISH_WAIT_LIMIT_DESC>The number of milliseconds to listen for a fish before giving up. Too long decrease bots effectiveness, too short and you miss fish.</LABEL_FISH_WAIT_LIMIT_DESC>
 
-        <LABEL_DELAY_AFTER_LOOTING>Delay After Looting:</LABEL_DELAY_AFTER_LOOTING>
+        <LABEL_DELAY_AFTER_LOOTING>Delai après Loot:</LABEL_DELAY_AFTER_LOOTING>
         <LABEL_DELAY_AFTER_LOOTING_DESC>The number of milliseconds to wait after looting a fish.</LABEL_DELAY_AFTER_LOOTING_DESC>
 
         <!-- Finding the Cursor -->
 
-        <LABEL_SCANNING_STEPS>Scanning Steps:</LABEL_SCANNING_STEPS>
+        <LABEL_SCANNING_STEPS>Etapes de Scan :</LABEL_SCANNING_STEPS>
         <LABEL_SCANNING_STEPS_DESC>The greater number of steps, the less likely you are to miss the cursor; but the slower your scan will be.</LABEL_SCANNING_STEPS_DESC>
 
-        <LABEL_SCANNING_DELAY>Scanning Delay:</LABEL_SCANNING_DELAY>
+        <LABEL_SCANNING_DELAY>Délai de Scan :</LABEL_SCANNING_DELAY>
         <LABEL_SCANNING_DELAY_DESC>The number of milliseconds to wait before checking if the cursor has changed.  To slow and you might not detect the bobber; but a bigger number goes slower.</LABEL_SCANNING_DELAY_DESC>
 
-        <LABEL_SCANNING_RETRIES>Scanning Retries:</LABEL_SCANNING_RETRIES>
+        <LABEL_SCANNING_RETRIES>Tentatives de Scan :</LABEL_SCANNING_RETRIES>
         <LABEL_SCANNING_RETRIES_DESC>How many times to run the search pattern.</LABEL_SCANNING_RETRIES_DESC>
 
         <!-- Hearing the Fish -->
 
-        <LABEL_SPLASH_THRESHOLD>Splash Threshold:</LABEL_SPLASH_THRESHOLD>
+        <LABEL_SPLASH_THRESHOLD>Seuil de Splash :</LABEL_SPLASH_THRESHOLD>
         <LABEL_SPLASH_THRESHOLD_DESC>Determines if a given sound is loud enough to be a fish or not.  Too low and the bot will mistake non-fish for fish.  Too high and the bot will ignore the real fish.</LABEL_SPLASH_THRESHOLD_DESC>
 
-        <LABEL_SCANNING_DELAY>Audio Device:</LABEL_SCANNING_DELAY>
+        <LABEL_SCANNING_DELAY>Périphérique Audio :</LABEL_SCANNING_DELAY>
         <LABEL_SCANNING_DELAY_DESC>Select the audio device that WoW is Using.  If the bot cannot 'hear' the game, it will never catch any fish.  If you are unsure, play some music and select each device until you find the right one.</LABEL_SCANNING_DELAY_DESC>
 
         <!-- Premium Settings -->
@@ -121,12 +126,12 @@
         <LABEL_PROCESS_NAME_DESC>The name of the process to activate (this rarely changes) but has been updated with new expansions in the past.</LABEL_PROCESS_NAME_DESC>
 
         <!-- Language  -->
-        <LABEL_LANGUAGE>Language :</LABEL_LANGUAGE>
+        <LABEL_LANGUAGE>Langue :</LABEL_LANGUAGE>
         <LABEL_LANGUAGE_DESC>
-          Select the language that you want to use.
-          Language XML Files must be found in Resources folder.
+          Choisissez la langue souhaitée.
+          Les fichiers de langue XML doivent se situer dans le répertoire "Resources".
         </LABEL_LANGUAGE_DESC>
-        <TITLE_LANGUAGE_CHANGE>Restart Required.</TITLE_LANGUAGE_CHANGE>
-        <LABEL_LANGUAGE_CHANGE>The application will restart in order to apply the language change.</LABEL_LANGUAGE_CHANGE>
+        <TITLE_LANGUAGE_CHANGE>Redémarrage Requis</TITLE_LANGUAGE_CHANGE>
+        <LABEL_LANGUAGE_CHANGE>L'application va redémarrer afin prendre en compte le changement de langue.</LABEL_LANGUAGE_CHANGE>
     </frmSettings>
 </translation>
