@@ -103,7 +103,7 @@
 
         <!-- Premium Settings -->
         <LABEL_CAST_KEY>Touche Cast:</LABEL_CAST_KEY>
-        <LABEL_LURE_KEY>Touche Leure:</LABEL_LURE_KEY>
+        <LABEL_LURE_KEY>Touche Leurre:</LABEL_LURE_KEY>
         <LABEL_HEARTHSTONE_KEY>Touche PDF:</LABEL_HEARTHSTONE_KEY>
         <LABEL_RAFT_KEY>Touche Radeau:</LABEL_RAFT_KEY>
         <LABEL_CHARM_KEY>Touche Charme:</LABEL_CHARM_KEY>
@@ -118,11 +118,11 @@
         <LABEL_CUSTOMIZE_DESC>Parametrez vos raccourcis pour éviter de ré-arranger vos barres avant/après la pêche.</LABEL_CUSTOMIZE_DESC>
 
         <CB_ALT_KEY>Utiliser touche Alt</CB_ALT_KEY>
-        <CB_AUTO_LURE>Appliquer Leure toutes les 10 minutes</CB_AUTO_LURE>
+        <CB_AUTO_LURE>Appliquer Leurre toutes les X minutes</CB_AUTO_LURE>
         <CB_AUTO_HEARTHSTONE>Pierre de Foyer après X Minutes:</CB_AUTO_HEARTHSTONE>
-        <CB_AUTO_RAFT>Radeau toutes les 8 minutes</CB_AUTO_RAFT>
-        <CB_AUTO_CHARM>Charme toutes les 60 minutes</CB_AUTO_CHARM>
-        <CB_AUTO_BAIT>Appât toutes les 5 minutes</CB_AUTO_BAIT>
+        <CB_AUTO_RAFT>Radeau toutes les X minutes</CB_AUTO_RAFT>
+        <CB_AUTO_CHARM>Charme toutes les X minutes</CB_AUTO_CHARM>
+        <CB_AUTO_BAIT>Appât toutes les X minutes</CB_AUTO_BAIT>
         <CB_RANDOM_BAIT>Appât aléatoire entre les 7 possibles</CB_RANDOM_BAIT>
         <CB_SHIFT_LOOT>Shift-Loot? (Si AutoLoot désactivé, activez cette option)</CB_SHIFT_LOOT>
 

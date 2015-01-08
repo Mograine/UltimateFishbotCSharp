@@ -454,5 +454,53 @@ namespace UltimateFishBot.Properties {
                 this["CheckCursor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int LureTime {
+            get {
+                return ((int)(this["LureTime"]));
+            }
+            set {
+                this["LureTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8")]
+        public int RaftTime {
+            get {
+                return ((int)(this["RaftTime"]));
+            }
+            set {
+                this["RaftTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("60")]
+        public int CharmTime {
+            get {
+                return ((int)(this["CharmTime"]));
+            }
+            set {
+                this["CharmTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int BaitTime {
+            get {
+                return ((int)(this["BaitTime"]));
+            }
+            set {
+                this["BaitTime"] = value;
+            }
+        }
     }
 }

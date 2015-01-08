@@ -96,6 +96,8 @@
             this.LabelDelayCastDesc = new System.Windows.Forms.Label();
             this.LabelDelayCast = new System.Windows.Forms.Label();
             this.TabPage1 = new System.Windows.Forms.TabPage();
+            this.LabelCheckCursorIcon = new System.Windows.Forms.Label();
+            this.cmbCompareIcon = new System.Windows.Forms.CheckBox();
             this.txtRetries = new System.Windows.Forms.TextBox();
             this.LabelScanningRetriesDesc = new System.Windows.Forms.Label();
             this.LabelScanningRetries = new System.Windows.Forms.Label();
@@ -104,8 +106,10 @@
             this.labelLanguageDesc = new System.Windows.Forms.Label();
             this.labelLanguage = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.cmbCompareIcon = new System.Windows.Forms.CheckBox();
-            this.LabelCheckCursorIcon = new System.Windows.Forms.Label();
+            this.txtLureTime = new System.Windows.Forms.TextBox();
+            this.txtRaftTime = new System.Windows.Forms.TextBox();
+            this.txtBaitTime = new System.Windows.Forms.TextBox();
+            this.txtCharmTime = new System.Windows.Forms.TextBox();
             this.TabPage3.SuspendLayout();
             this.TabPage4.SuspendLayout();
             this.tabSettings.SuspendLayout();
@@ -249,6 +253,10 @@
             // 
             // TabPage4
             // 
+            this.TabPage4.Controls.Add(this.txtCharmTime);
+            this.TabPage4.Controls.Add(this.txtBaitTime);
+            this.TabPage4.Controls.Add(this.txtRaftTime);
+            this.TabPage4.Controls.Add(this.txtLureTime);
             this.TabPage4.Controls.Add(this.cbRandomBait);
             this.TabPage4.Controls.Add(this.LabelBaitKey7);
             this.TabPage4.Controls.Add(this.txtBaitKey7);
@@ -296,7 +304,7 @@
             // cbRandomBait
             // 
             this.cbRandomBait.AutoSize = true;
-            this.cbRandomBait.Location = new System.Drawing.Point(267, 206);
+            this.cbRandomBait.Location = new System.Drawing.Point(244, 207);
             this.cbRandomBait.Name = "cbRandomBait";
             this.cbRandomBait.Size = new System.Drawing.Size(203, 17);
             this.cbRandomBait.TabIndex = 48;
@@ -430,11 +438,11 @@
             // cbApplyCharm
             // 
             this.cbApplyCharm.AutoSize = true;
-            this.cbApplyCharm.Location = new System.Drawing.Point(267, 185);
+            this.cbApplyCharm.Location = new System.Drawing.Point(244, 185);
             this.cbApplyCharm.Name = "cbApplyCharm";
-            this.cbApplyCharm.Size = new System.Drawing.Size(180, 17);
+            this.cbApplyCharm.Size = new System.Drawing.Size(175, 17);
             this.cbApplyCharm.TabIndex = 33;
-            this.cbApplyCharm.Text = "Refresh Charm Every 60 minutes";
+            this.cbApplyCharm.Text = "Refresh Charm Every X minutes";
             this.cbApplyCharm.UseVisualStyleBackColor = true;
             // 
             // cbApplyRaft
@@ -442,9 +450,9 @@
             this.cbApplyRaft.AutoSize = true;
             this.cbApplyRaft.Location = new System.Drawing.Point(11, 185);
             this.cbApplyRaft.Name = "cbApplyRaft";
-            this.cbApplyRaft.Size = new System.Drawing.Size(164, 17);
+            this.cbApplyRaft.Size = new System.Drawing.Size(165, 17);
             this.cbApplyRaft.TabIndex = 32;
-            this.cbApplyRaft.Text = "Refresh Raft Every 8 minutes";
+            this.cbApplyRaft.Text = "Refresh Raft Every X minutes";
             this.cbApplyRaft.UseVisualStyleBackColor = true;
             // 
             // txtCharmKey
@@ -488,7 +496,7 @@
             // txtHearthTime
             // 
             this.txtHearthTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHearthTime.Location = new System.Drawing.Point(443, 160);
+            this.txtHearthTime.Location = new System.Drawing.Point(449, 161);
             this.txtHearthTime.Name = "txtHearthTime";
             this.txtHearthTime.Size = new System.Drawing.Size(30, 20);
             this.txtHearthTime.TabIndex = 27;
@@ -507,7 +515,7 @@
             // cbHearth
             // 
             this.cbHearth.AutoSize = true;
-            this.cbHearth.Location = new System.Drawing.Point(267, 163);
+            this.cbHearth.Location = new System.Drawing.Point(244, 163);
             this.cbHearth.Name = "cbHearth";
             this.cbHearth.Size = new System.Drawing.Size(170, 17);
             this.cbHearth.TabIndex = 8;
@@ -557,9 +565,9 @@
             this.cbAutoLure.AutoSize = true;
             this.cbAutoLure.Location = new System.Drawing.Point(11, 163);
             this.cbAutoLure.Name = "cbAutoLure";
-            this.cbAutoLure.Size = new System.Drawing.Size(160, 17);
+            this.cbAutoLure.Size = new System.Drawing.Size(155, 17);
             this.cbAutoLure.TabIndex = 7;
-            this.cbAutoLure.Text = "Apply Lure Every 10 minutes";
+            this.cbAutoLure.Text = "Apply Lure Every X minutes";
             this.cbAutoLure.UseVisualStyleBackColor = true;
             // 
             // txtHearthKey
@@ -643,9 +651,9 @@
             this.cbAutoBait.AutoSize = true;
             this.cbAutoBait.Location = new System.Drawing.Point(11, 207);
             this.cbAutoBait.Name = "cbAutoBait";
-            this.cbAutoBait.Size = new System.Drawing.Size(151, 17);
+            this.cbAutoBait.Size = new System.Drawing.Size(152, 17);
             this.cbAutoBait.TabIndex = 32;
-            this.cbAutoBait.Text = "Apply Bait Every 5 minutes";
+            this.cbAutoBait.Text = "Apply Bait Every X minutes";
             this.cbAutoBait.UseVisualStyleBackColor = true;
             // 
             // LabelScanningDelay
@@ -819,6 +827,27 @@
             this.TabPage1.Text = "Finding The Cursor";
             this.TabPage1.UseVisualStyleBackColor = true;
             // 
+            // LabelCheckCursorIcon
+            // 
+            this.LabelCheckCursorIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCheckCursorIcon.Location = new System.Drawing.Point(3, 248);
+            this.LabelCheckCursorIcon.Name = "LabelCheckCursorIcon";
+            this.LabelCheckCursorIcon.Size = new System.Drawing.Size(423, 58);
+            this.LabelCheckCursorIcon.TabIndex = 19;
+            this.LabelCheckCursorIcon.Text = "Specify if the bot must check the icon before fishing. Avoid clicking when it\'s n" +
+    "ot a bobber. May not work on some computer, disable if the bot don\'t find your b" +
+    "obber.";
+            // 
+            // cmbCompareIcon
+            // 
+            this.cmbCompareIcon.AutoSize = true;
+            this.cmbCompareIcon.Location = new System.Drawing.Point(5, 228);
+            this.cmbCompareIcon.Name = "cmbCompareIcon";
+            this.cmbCompareIcon.Size = new System.Drawing.Size(114, 17);
+            this.cmbCompareIcon.TabIndex = 18;
+            this.cmbCompareIcon.Text = "Check Cursor Icon";
+            this.cmbCompareIcon.UseVisualStyleBackColor = true;
+            // 
             // txtRetries
             // 
             this.txtRetries.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -900,26 +929,41 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // cmbCompareIcon
+            // txtLureTime
             // 
-            this.cmbCompareIcon.AutoSize = true;
-            this.cmbCompareIcon.Location = new System.Drawing.Point(5, 228);
-            this.cmbCompareIcon.Name = "cmbCompareIcon";
-            this.cmbCompareIcon.Size = new System.Drawing.Size(114, 17);
-            this.cmbCompareIcon.TabIndex = 18;
-            this.cmbCompareIcon.Text = "Check Cursor Icon";
-            this.cmbCompareIcon.UseVisualStyleBackColor = true;
+            this.txtLureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLureTime.Location = new System.Drawing.Point(205, 161);
+            this.txtLureTime.Name = "txtLureTime";
+            this.txtLureTime.Size = new System.Drawing.Size(30, 20);
+            this.txtLureTime.TabIndex = 49;
+            this.txtLureTime.Text = "10";
             // 
-            // LabelCheckCursorIcon
+            // txtRaftTime
             // 
-            this.LabelCheckCursorIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCheckCursorIcon.Location = new System.Drawing.Point(3, 248);
-            this.LabelCheckCursorIcon.Name = "LabelCheckCursorIcon";
-            this.LabelCheckCursorIcon.Size = new System.Drawing.Size(423, 58);
-            this.LabelCheckCursorIcon.TabIndex = 19;
-            this.LabelCheckCursorIcon.Text = "Specify if the bot must check the icon before fishing. Avoid clicking when it\'s n" +
-    "ot a bobber. May not work on some computer, disable if the bot don\'t find your b" +
-    "obber.";
+            this.txtRaftTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRaftTime.Location = new System.Drawing.Point(205, 183);
+            this.txtRaftTime.Name = "txtRaftTime";
+            this.txtRaftTime.Size = new System.Drawing.Size(30, 20);
+            this.txtRaftTime.TabIndex = 50;
+            this.txtRaftTime.Text = "8";
+            // 
+            // txtBaitTime
+            // 
+            this.txtBaitTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBaitTime.Location = new System.Drawing.Point(205, 205);
+            this.txtBaitTime.Name = "txtBaitTime";
+            this.txtBaitTime.Size = new System.Drawing.Size(30, 20);
+            this.txtBaitTime.TabIndex = 51;
+            this.txtBaitTime.Text = "5";
+            // 
+            // txtCharmTime
+            // 
+            this.txtCharmTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCharmTime.Location = new System.Drawing.Point(449, 183);
+            this.txtCharmTime.Name = "txtCharmTime";
+            this.txtCharmTime.Size = new System.Drawing.Size(30, 20);
+            this.txtCharmTime.TabIndex = 52;
+            this.txtCharmTime.Text = "60";
             // 
             // frmSettings
             // 
@@ -1025,6 +1069,10 @@
         internal System.Windows.Forms.ComboBox cmbLanguage;
         internal System.Windows.Forms.Label LabelCheckCursorIcon;
         internal System.Windows.Forms.CheckBox cmbCompareIcon;
+        internal System.Windows.Forms.TextBox txtCharmTime;
+        internal System.Windows.Forms.TextBox txtBaitTime;
+        internal System.Windows.Forms.TextBox txtRaftTime;
+        internal System.Windows.Forms.TextBox txtLureTime;
 
     }
 }

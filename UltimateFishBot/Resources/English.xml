@@ -113,11 +113,11 @@
         <LABEL_CUSTOMIZE_DESC>Customize shortkeys to avoid rearranging your bars before/after fishing.</LABEL_CUSTOMIZE_DESC>
 
         <CB_ALT_KEY>Use Alt-Key Modifer</CB_ALT_KEY>
-        <CB_AUTO_LURE>Apply Lure Every 10 minutes</CB_AUTO_LURE>
+        <CB_AUTO_LURE>Apply Lure Every X minutes</CB_AUTO_LURE>
         <CB_AUTO_HEARTHSTONE>Hearth To Inn After X Minutes:</CB_AUTO_HEARTHSTONE>
-        <CB_AUTO_RAFT>Refresh Raft Every 8 minutes</CB_AUTO_RAFT>
-        <CB_AUTO_CHARM>Refresh Charm Every 60 minutes</CB_AUTO_CHARM>
-        <CB_AUTO_BAIT>Apply Bait Every 5 minutes</CB_AUTO_BAIT>
+        <CB_AUTO_RAFT>Refresh Raft Every X minutes</CB_AUTO_RAFT>
+        <CB_AUTO_CHARM>Refresh Charm Every X minutes</CB_AUTO_CHARM>
+        <CB_AUTO_BAIT>Apply Bait Every X minutes</CB_AUTO_BAIT>
         <CB_RANDOM_BAIT>Random bait between the 7 possibles</CB_RANDOM_BAIT>
         <CB_SHIFT_LOOT>Shift-Loot? (If AutoLoot is Disabled, Enable This)</CB_SHIFT_LOOT>
 

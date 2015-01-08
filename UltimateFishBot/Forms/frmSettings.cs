@@ -165,6 +165,13 @@ namespace UltimateFishBot.Forms
             cbAutoBait.Checked      = Properties.Settings.Default.AutoBait;
             cbRandomBait.Checked    = Properties.Settings.Default.randomBait;
 
+            //Times
+            txtLureTime.Text        = Properties.Settings.Default.LureTime.ToString();
+            txtHearthTime.Text      = Properties.Settings.Default.HearthTime.ToString();
+            txtRaftTime.Text        = Properties.Settings.Default.RaftTime.ToString();
+            txtCharmTime.Text       = Properties.Settings.Default.CharmTime.ToString();
+            txtBaitTime.Text        = Properties.Settings.Default.BaitTime.ToString();
+
             LoadLanguages();
         }
 
@@ -201,7 +208,6 @@ namespace UltimateFishBot.Forms
             Properties.Settings.Default.LureKey         = txtLureKey.Text;
             Properties.Settings.Default.HearthKey       = txtHearthKey.Text;
             Properties.Settings.Default.AutoHearth      = cbHearth.Checked;
-            Properties.Settings.Default.HearthTime      = int.Parse(txtHearthTime.Text);
 
             // MoP Premium (Angler's Raft & Ancient Pandaren Fishing Charm)
             Properties.Settings.Default.CharmKey        = txtCharmKey.Text;
@@ -220,6 +226,13 @@ namespace UltimateFishBot.Forms
             Properties.Settings.Default.BaitKey7        = txtBaitKey7.Text;
             Properties.Settings.Default.AutoBait        = cbAutoBait.Checked;
             Properties.Settings.Default.randomBait      = cbRandomBait.Checked;
+
+            //Times
+            Properties.Settings.Default.LureTime        = int.Parse(txtLureTime.Text);
+            Properties.Settings.Default.HearthTime      = int.Parse(txtHearthTime.Text);
+            Properties.Settings.Default.RaftTime        = int.Parse(txtRaftTime.Text);
+            Properties.Settings.Default.CharmTime       = int.Parse(txtCharmTime.Text);
+            Properties.Settings.Default.BaitTime        = int.Parse(txtBaitTime.Text);
 
             if ((string)cmbLanguage.SelectedItem != Properties.Settings.Default.Language)
             {
